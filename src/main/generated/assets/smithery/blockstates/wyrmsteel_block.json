@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "smithery:block/wyrmsteel_block"
+    }
+  }
+}

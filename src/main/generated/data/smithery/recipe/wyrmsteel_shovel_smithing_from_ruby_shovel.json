@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "smithery:wyrmsteel_ingot"
+  },
+  "base": {
+    "item": "smithery:ruby_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "smithery:wyrmsteel_shovel"
+  },
+  "template": {
+    "item": "smithery:wyrmsteel_upgrade"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "r": {
+      "item": "smithery:rose_gold_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "rr ",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "smithery:rose_gold_hoe"
+  }
+}

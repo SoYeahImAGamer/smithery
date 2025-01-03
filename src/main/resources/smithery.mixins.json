@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.robinsplaza.smithery.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"PiglinBrainMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

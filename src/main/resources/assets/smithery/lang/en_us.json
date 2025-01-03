@@ -1,0 +1,85 @@
+{
+  "block.smithery.rose_gold_block": "Rose Gold Block",
+  "block.smithery.ruby_block": "Ruby Block",
+  "block.smithery.wyrmsteel_block": "Wyrmsteel Block",
+  "block.smithery.nether_ruby_ore": "Nether Ruby Ore",
+  "block.smithery.quicksilver_ore": "Quicksilver Ore",
+
+  "block.smithery.void_block": "Block of Void",
+  "block.smithery.iron_grate": "Iron Grate",
+  "block.smithery.rose_gold_grate": "Rose Gold Grate",
+  "block.smithery.rose_gold_bars": "Rose Gold Bars",
+  "block.smithery.rose_gold_chain": "Rose Gold Chain",
+  "block.smithery.gold_grate": "Gold Grate",
+  "block.smithery.gold_bars": "Gold Bars",
+  "block.smithery.gold_chain": "Gold Chain",
+  "block.smithery.netherite_grate": "Netherite Grate",
+  "block.smithery.netherite_bars": "Netherite Bars",
+  "block.smithery.netherite_wall": "Netherite Wall",
+  "block.smithery.netherite_chain": "Netherite Chain",
+
+  "item.smithery.ruby": "Ruby",
+  "item.smithery.quicksilver": "Quicksilver",
+  "item.smithery.rose_gold_ingot": "Rose Gold Ingot",
+  "item.smithery.rose_gold_nugget": "Rose Gold Nugget",
+  "item.smithery.copper_nugget": "Copper Nugget",
+  "item.smithery.wyrmsteel_ingot": "Wyrmsteel Ingot",
+
+  "item.smithery.wyrmsteel_upgrade": "Smithing Template",
+  "upgrade.minecraft.wyrmsteel_upgrade": "Wyrmsteel Upgrade",
+  "item.minecraft.smithing_template.wyrmsteel_upgrade.additions_slot_description": "Add Wyrmsteel Ingot",
+  "item.minecraft.smithing_template.wyrmsteel_upgrade.applies_to": "Diamond Equipment",
+  "item.minecraft.smithing_template.wyrmsteel_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.minecraft.smithing_template.wyrmsteel_upgrade.ingredients": "Wyrmsteel Ingot",
+
+  "item.smithery.wyrmsteel_pickaxe": "Wyrmsteel Pickaxe",
+  "item.smithery.wyrmsteel_hammer": "Wyrmsteel Mining Hammer",
+  "item.smithery.wyrmsteel_axe": "Wyrmsteel Axe",
+  "item.smithery.wyrmsteel_shovel": "Wyrmsteel Shovel",
+  "item.smithery.wyrmsteel_hoe": "Wyrmsteel Hoe",
+  "item.smithery.wyrmsteel_sword": "Wyrmsteel Sword",
+
+  "item.smithery.rose_gold_pickaxe": "Rose Gold Pickaxe",
+  "item.smithery.rose_gold_axe": "Rose Gold Axe",
+  "item.smithery.rose_gold_shovel": "Rose Gold Shovel",
+  "item.smithery.rose_gold_hoe": "Rose Gold Hoe",
+  "item.smithery.rose_gold_sword": "Rose Gold Sword",
+
+  "item.smithery.ruby_pickaxe": "Ruby Pickaxe",
+  "item.smithery.ruby_hammer": "Ruby Mining Hammer",
+  "item.smithery.ruby_axe": "Ruby Axe",
+  "item.smithery.ruby_shovel": "Ruby Shovel",
+  "item.smithery.ruby_hoe": "Ruby Hoe",
+  "item.smithery.ruby_sword": "Ruby Sword",
+
+  "item.smithery.magic_mirror": "Magic Mirror",
+
+  "item.smithery.wyrmsteel_helmet": "Wyrmsteel Helmet",
+  "item.smithery.wyrmsteel_chestplate": "Wyrmsteel Chestplate",
+  "item.smithery.wyrmsteel_leggings": "Wyrmsteel Leggings",
+  "item.smithery.wyrmsteel_boots": "Wyrmsteel Boots",
+
+  "item.smithery.rose_gold_helmet": "Rose Gold Helmet",
+  "item.smithery.rose_gold_chestplate": "Rose Gold Chestplate",
+  "item.smithery.rose_gold_leggings": "Rose Gold Leggings",
+  "item.smithery.rose_gold_boots": "Rose Gold Boots",
+
+  "item.smithery.ruby_helmet": "Ruby Helmet",
+  "item.smithery.ruby_chestplate": "Ruby Chestplate",
+  "item.smithery.ruby_leggings": "Ruby Leggings",
+  "item.smithery.ruby_boots": "Ruby Boots",
+
+  "item.smithery.diamond_hammer": "Diamond Mining Hammer",
+  "item.smithery.netherite_hammer": "Netherite Mining Hammer",
+
+  "advancements.end.mine_quicksilver": "Shiny Sludge",
+  "advancements.end.mine_quicksilver.desc": "Get quicksilver",
+  "advancements.end.get_wyrmsteel": "Void Hardware",
+  "advancements.end.get_wyrmsteel.desc": "Craft an ingot of Wyrmsteel",
+  "advancements.end.get_void_block": "Stare Into the Void",
+  "advancements.end.get_void_block.desc": "Craft a block of void",
+  "advancements.nether.mine_ruby": "These Aren't Diamonds?",
+  "advancements.nether.mine_ruby.desc": "Get a ruby",
+
+  "itemgroup.smithery": "Smithery"
+}

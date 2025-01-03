@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "smithery:wyrmsteel_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "smithery:wyrmsteel_leggings"
+  },
+  "template": {
+    "item": "smithery:wyrmsteel_upgrade"
+  }
+}

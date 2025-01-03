@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "r": {
+      "item": "smithery:ruby_block"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " r ",
+    " sr",
+    "s  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "smithery:ruby_hammer"
+  }
+}

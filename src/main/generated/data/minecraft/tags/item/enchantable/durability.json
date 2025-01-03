@@ -1,0 +1,23 @@
+{
+  "values": [
+    "smithery:rose_gold_pickaxe",
+    "smithery:rose_gold_axe",
+    "smithery:rose_gold_shovel",
+    "smithery:rose_gold_hoe",
+    "smithery:rose_gold_sword",
+    "smithery:ruby_pickaxe",
+    "smithery:ruby_sword",
+    "smithery:ruby_axe",
+    "smithery:ruby_shovel",
+    "smithery:ruby_hoe",
+    "smithery:ruby_hammer",
+    "smithery:wyrmsteel_sword",
+    "smithery:wyrmsteel_pickaxe",
+    "smithery:wyrmsteel_axe",
+    "smithery:wyrmsteel_shovel",
+    "smithery:wyrmsteel_hoe",
+    "smithery:wyrmsteel_hammer",
+    "smithery:diamond_hammer",
+    "smithery:netherite_hammer"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "smithery:block/ruby_block"
+    }
+  }
+}

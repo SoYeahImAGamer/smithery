@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "smithery",
+	"version": "${version}",
+	"name": "Smithery",
+	"description": "Upgrade, and then upgrade again!",
+	"authors": [
+		"RobinsPlaza"
+	],
+	"contact": {
+		"homepage": "https://robinsplaza.org/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/smithery/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.robinsplaza.smithery.Smithery"
+		],
+		"fabric-datagen": [
+			"com.robinsplaza.smithery.SmitheryDataGenerator"
+		],
+		"client": [
+			"com.robinsplaza.smithery.SmitheryClient"
+		]
+	},
+	"mixins": [
+		"smithery.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

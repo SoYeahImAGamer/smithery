@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:wyrmsteel_boots_smithing_from_diamond_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wyrmsteel_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "smithery:wyrmsteel_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wyrmsteel_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:wyrmsteel_boots_smithing_from_diamond_boots"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "smithery:rose_gold_block"
+  },
+  "result": {
+    "count": 24,
+    "id": "smithery:rose_gold_bars"
+  }
+}

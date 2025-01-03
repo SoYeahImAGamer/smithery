@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "r": {
+      "item": "smithery:ruby"
+    }
+  },
+  "pattern": [
+    "rrr",
+    "r r",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "smithery:ruby_helmet"
+  }
+}

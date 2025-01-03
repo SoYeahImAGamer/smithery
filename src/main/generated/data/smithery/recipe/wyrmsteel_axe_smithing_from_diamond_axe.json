@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "smithery:wyrmsteel_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_axe"
+  },
+  "result": {
+    "count": 1,
+    "id": "smithery:wyrmsteel_axe"
+  },
+  "template": {
+    "item": "smithery:wyrmsteel_upgrade"
+  }
+}

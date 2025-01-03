@@ -1,0 +1,25 @@
+// 1.21	2024-12-21T16:51:53.4146456	Smithery/Tags for minecraft:item
+3a7d9e3e11f61e73f44d24d0a006e1e50cbab0cc data\smithery\tags\item\hammers.json
+e7d383dfd801fb1469b9c148e772ada5b3ff8512 data\minecraft\tags\item\leg_armor.json
+546eead8b0557ade6314641a6e77148e6acc989e data\smithery\tags\item\ruby_armor.json
+f1ba9de06de58cb4d4cfe02cdaa2467c9e7592ca data\c\tags\item\tools.json
+916785192326e6830311225166f5bc4deb34a060 data\minecraft\tags\item\enchantable\durability.json
+de863551584bcd606862c4f23693b6f4c640db4d data\smithery\tags\item\ruby_tools.json
+42c24bcec896d6cef9568ee3d24257d32f6b5eec data\minecraft\tags\item\head_armor.json
+a710f81623d6a1bdaec0fe9ad5930d681681b047 data\minecraft\tags\item\enchantable\mining.json
+20d0e931b762d290b2d05fc57ae7712dc8ec7a5a data\minecraft\tags\item\foot_armor.json
+cd12d11bedaccf77388e6f24348d3b6b94182965 data\minecraft\tags\item\enchantable\weapon.json
+cd12d11bedaccf77388e6f24348d3b6b94182965 data\minecraft\tags\item\enchantable\sharp_weapon.json
+cc14a532d49f8071b4eb26fcea647a03b15e45f6 data\smithery\tags\item\wyrmsteel_tools.json
+a122b5498fe1af93ab0121820702483f67ae3266 data\minecraft\tags\item\axes.json
+7c3317d2f98e245a7267c97481cf859a6984ab54 data\minecraft\tags\item\swords.json
+73e73de73692396b703eba6fd9f844fc1f560a40 data\c\tags\item\piglin_safe_armor.json
+b68cecf7ba4949d83f09bd03f5bb8824aaaca649 data\smithery\tags\item\wyrmsteel_armor.json
+5d5274f9857f929651632ee8170083ba3ceaf601 data\minecraft\tags\item\shovels.json
+c8b2f310fb2244001c9af91e14485b11a668cd4e data\smithery\tags\item\rose_gold_tools.json
+bea5caeae4a5a18025d38ba843b26dc28f6d64a7 data\minecraft\tags\item\chest_armor.json
+42dee9d6d99d613373cfe18ab77554e3444d276b data\minecraft\tags\item\trimmable_armor.json
+c7ade03d7bbf081bf84f43125d82bf9e5c0fc1ce data\minecraft\tags\item\hoes.json
+e2ce6d524fac91dae46fb5d1cc7cef6919c8ed36 data\smithery\tags\item\rose_gold_armor.json
+d2adc7f2670ee44ae9a48c14b4de5d7cbbacb7dc data\minecraft\tags\item\pickaxes.json
+e43808ff07ff84c72b18a6b4d63b1535bafceefc data\minecraft\tags\item\piglin_loved.json

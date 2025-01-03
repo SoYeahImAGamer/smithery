@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "smithery:block/void_block_item"
+    }
+  }
+}

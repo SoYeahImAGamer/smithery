@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "smithery:wyrmsteel_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "smithery:wyrmsteel_ingot"
+  }
+}

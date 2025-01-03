@@ -1,0 +1,19 @@
+{
+  "values": [
+    "smithery:quicksilver_ore",
+    "smithery:ruby_block",
+    "smithery:nether_ruby_ore",
+    "smithery:void_block",
+    "smithery:iron_grate",
+    "smithery:rose_gold_grate",
+    "smithery:rose_gold_bars",
+    "smithery:rose_gold_chain",
+    "smithery:gold_grate",
+    "smithery:gold_bars",
+    "smithery:gold_chain",
+    "smithery:netherite_grate",
+    "smithery:netherite_bars",
+    "smithery:netherite_wall",
+    "smithery:netherite_chain"
+  ]
+}

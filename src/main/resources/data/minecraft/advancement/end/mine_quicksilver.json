@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "smithery:quicksilver",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.end.mine_quicksilver"
+    },
+    "description": {
+      "translate": "advancements.end.mine_quicksilver.desc"
+    }
+  },
+  "parent": "minecraft:end/enter_end_gateway",
+  "criteria": {
+    "diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "smithery:quicksilver"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "diamond"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

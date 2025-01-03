@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "g": {
+      "item": "minecraft:glowstone"
+    },
+    "q": {
+      "item": "smithery:quicksilver"
+    }
+  },
+  "pattern": [
+    "qqq",
+    "qgq",
+    "qqq"
+  ],
+  "result": {
+    "count": 4,
+    "id": "smithery:void_block"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "smithery:ruby",
+      "count": 1
+    },
+    "title": {
+      "translate": "advancements.nether.mine_ruby"
+    },
+    "description": {
+      "translate": "advancements.nether.mine_ruby.desc"
+    }
+  },
+  "parent": "minecraft:nether/root",
+  "criteria": {
+    "diamond": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "smithery:ruby"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "diamond"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

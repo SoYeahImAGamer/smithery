@@ -1,0 +1,6 @@
+{
+  "parent": "block/end_portal",
+  "textures": {
+    "particle": "minecraft:block/end_portal"
+  }
+}

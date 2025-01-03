@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "smithery:block/rose_gold_chain",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "smithery:block/rose_gold_chain"
+    },
+    "axis=z": {
+      "model": "smithery:block/rose_gold_chain",
+      "x": 90
+    }
+  }
+}

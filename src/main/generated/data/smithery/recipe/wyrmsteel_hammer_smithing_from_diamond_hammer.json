@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "smithery:wyrmsteel_ingot"
+  },
+  "base": {
+    "item": "smithery:diamond_hammer"
+  },
+  "result": {
+    "count": 1,
+    "id": "smithery:wyrmsteel_hammer"
+  },
+  "template": {
+    "item": "smithery:wyrmsteel_upgrade"
+  }
+}

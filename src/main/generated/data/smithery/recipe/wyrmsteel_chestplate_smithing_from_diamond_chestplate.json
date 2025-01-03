@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "smithery:wyrmsteel_ingot"
+  },
+  "base": {
+    "item": "minecraft:diamond_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "smithery:wyrmsteel_chestplate"
+  },
+  "template": {
+    "item": "smithery:wyrmsteel_upgrade"
+  }
+}

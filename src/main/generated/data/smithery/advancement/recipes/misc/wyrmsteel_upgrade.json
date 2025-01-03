@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "smithery:wyrmsteel_upgrade"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wyrmsteel_upgrade": {
+      "conditions": {
+        "items": [
+          {
+            "items": "smithery:wyrmsteel_upgrade"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wyrmsteel_upgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "smithery:wyrmsteel_upgrade"
+    ]
+  }
+}
