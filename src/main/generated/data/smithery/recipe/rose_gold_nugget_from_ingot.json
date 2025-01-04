@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "smithery:rose_gold_ingot"
-    }
-  ],
-  "result": {
-    "count": 9,
-    "id": "smithery:rose_gold_nugget"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed6983ece9a1177087ee03ac35839db5301cd6b7228087cc7b5dee517c172702
+size 216

@@ -1,8 +1,3 @@
-{
-  "values": [
-    "#smithery:hammers",
-    "#smithery:rose_gold_tools",
-    "#smithery:ruby_tools",
-    "#smithery:wyrmsteel_tools"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd2e792694161c69ac8e5c56fc48adc343973fd59358d08c7675ea205fffe6f3
+size 165

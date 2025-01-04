@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "smithery:wyrmsteel_ingot"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b40fed9eba52bb62e77356e7746d53dea17443c0cdd3474702cb2bc3787bcd09
+size 261

@@ -25,6 +25,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     private static final TagKey<Item> WYRMSTEEL_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:wyrmsteel_tools"));
     private static final TagKey<Item> WYRMSTEEL_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:wyrmsteel_armor"));
     private static final TagKey<Item> HAMMERS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:hammers"));
+    private static final TagKey<Item> MATTOCKS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:mattocks"));
 
     public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
         super(output, completableFuture);
@@ -34,6 +35,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup arg) {
 
         getOrCreateTagBuilder(TOOLS)
+                .addTag(MATTOCKS)
                 .addTag(HAMMERS)
                 .addTag(ROSE_GOLD_TOOLS)
                 .addTag(RUBY_TOOLS)
@@ -86,7 +88,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.NETHERITE_HAMMER)
                 .add(ModItems.WYRMSTEEL_HAMMER);
 
+        getOrCreateTagBuilder(MATTOCKS)
+                .add(ModItems.WYRMSTEEL_MATTOCK)
+                .add(ModItems.NETHERITE_MATTOCK)
+                .add(ModItems.DIAMOND_MATTOCK)
+                .add(ModItems.RUBY_MATTOCK)
+                .add(ModItems.ROSE_GOLD_MATTOCK)
+                .add(ModItems.IRON_MATTOCK)
+                .add(ModItems.GOLDEN_MATTOCK);
+
         getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+                .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.ROSE_GOLD_SHOVEL)
@@ -121,6 +133,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WYRMSTEEL_AXE);
 
         getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.ROSE_GOLD_SHOVEL)
@@ -154,10 +167,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RUBY_SHOVEL)
                 .add(ModItems.WYRMSTEEL_SHOVEL);
         getOrCreateTagBuilder(ItemTags.AXES)
+                .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.WYRMSTEEL_AXE);
         getOrCreateTagBuilder(ItemTags.HOES)
+                .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_HOE)
                 .add(ModItems.RUBY_HOE)
                 .add(ModItems.WYRMSTEEL_HOE);

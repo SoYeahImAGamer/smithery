@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_boots"
-  },
-  "result": {
-    "count": 1,
-    "id": "minecraft:netherite_boots"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4630fbd008b6c0e7d6cf698660b5a6870cfcfc9efed2623fa0e0cc36a92ef74
+size 310

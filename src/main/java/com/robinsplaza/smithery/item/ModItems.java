@@ -1,10 +1,7 @@
 package com.robinsplaza.smithery.item;
 
 import com.robinsplaza.smithery.Smithery;
-import com.robinsplaza.smithery.item.custom.HammerItem;
-import com.robinsplaza.smithery.item.custom.MirrorItem;
-import com.robinsplaza.smithery.item.custom.SpeedArmorItem;
-import com.robinsplaza.smithery.item.custom.ModSmithingTemplateItem;
+import com.robinsplaza.smithery.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -37,6 +34,9 @@ public class ModItems {
     public static final SwordItem WYRMSTEEL_SWORD = (SwordItem) registerItem("wyrmsteel_sword",
             new SwordItem(ModToolMaterial.WYRMSTEEL, new Item.Settings().rarity(Rarity.UNCOMMON)
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.WYRMSTEEL, 4, -2f))));
+    public static final MattockItem WYRMSTEEL_MATTOCK = (MattockItem) registerItem("wyrmsteel_mattock",
+            new MattockItem(ModToolMaterial.WYRMSTEEL, new Item.Settings().rarity(Rarity.UNCOMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ModToolMaterial.WYRMSTEEL, 6, -2.8f))));
 
         //rose gold set (sturdier gold)
     public static final PickaxeItem ROSE_GOLD_PICKAXE = (PickaxeItem) registerItem("rose_gold_pickaxe",
@@ -54,26 +54,32 @@ public class ModItems {
     public static final SwordItem ROSE_GOLD_SWORD = (SwordItem) registerItem("rose_gold_sword",
             new SwordItem(ModToolMaterial.ROSE_GOLD, new Item.Settings().rarity(Rarity.COMMON)
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.ROSE_GOLD, 3, -2.4f))));
+    public static final MattockItem ROSE_GOLD_MATTOCK = (MattockItem) registerItem("rose_gold_mattock",
+            new MattockItem(ModToolMaterial.ROSE_GOLD, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ModToolMaterial.ROSE_GOLD, 6, -3.0f))));
 
         //ruby set (red diamonds)
     public static final PickaxeItem RUBY_PICKAXE = (PickaxeItem) registerItem("ruby_pickaxe",
-            new PickaxeItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 1.0F, -2.8F))));
+            new PickaxeItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.RUBY, 1.0F, -2.8F))));
     public static final Item RUBY_HAMMER = registerItem("ruby_hammer",
-            new HammerItem(ModToolMaterial.DIAMOND_HAMMER, new Item.Settings().rarity(Rarity.COMMON).maxDamage(4296)
-                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.DIAMOND_HAMMER, 6, -3.2F))));
+            new HammerItem(ModToolMaterial.RUBY_HAMMER, new Item.Settings().rarity(Rarity.COMMON).maxDamage(4296)
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterial.RUBY_HAMMER, 6, -3.2F))));
     public static final AxeItem RUBY_AXE = (AxeItem) registerItem("ruby_axe",
-            new AxeItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
-                    .attributeModifiers(AxeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 6, -3.0f))));
+            new AxeItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(AxeItem.createAttributeModifiers(ModToolMaterial.RUBY, 6, -3.0f))));
     public static final ShovelItem RUBY_SHOVEL = (ShovelItem) registerItem("ruby_shovel",
-            new ShovelItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
-                    .attributeModifiers(ShovelItem.createAttributeModifiers(ToolMaterials.DIAMOND, 1.5f, -3.0f))));
+            new ShovelItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(ShovelItem.createAttributeModifiers(ModToolMaterial.RUBY, 1.5f, -3.0f))));
     public static final HoeItem RUBY_HOE = (HoeItem) registerItem("ruby_hoe",
-            new HoeItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
-                    .attributeModifiers(HoeItem.createAttributeModifiers(ToolMaterials.DIAMOND, 0, -3.0f))));
+            new HoeItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(HoeItem.createAttributeModifiers(ModToolMaterial.RUBY, 0, -3.0f))));
     public static final SwordItem RUBY_SWORD = (SwordItem) registerItem("ruby_sword",
-            new SwordItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 3, -2.4f))));
+            new SwordItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterial.RUBY, 3, -2.4f))));
+    public static final MattockItem RUBY_MATTOCK = (MattockItem) registerItem("ruby_mattock",
+            new MattockItem(ModToolMaterial.RUBY, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ModToolMaterial.RUBY, 6, -3.0f))));
 
         //vaniller hammers
     public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
@@ -82,6 +88,20 @@ public class ModItems {
     public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
             new HammerItem(ModToolMaterial.NETHERITE_HAMMER, new Item.Settings().attributeModifiers(PickaxeItem
                     .createAttributeModifiers(ModToolMaterial.NETHERITE_HAMMER, 6, -3.2F))));
+
+        //vanilla mattocks
+    public static final MattockItem NETHERITE_MATTOCK = (MattockItem) registerItem("netherite_mattock",
+            new MattockItem(ToolMaterials.NETHERITE, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -3.0f))));
+    public static final MattockItem DIAMOND_MATTOCK = (MattockItem) registerItem("diamond_mattock",
+            new MattockItem(ToolMaterials.DIAMOND, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -3.0f))));
+    public static final MattockItem GOLDEN_MATTOCK = (MattockItem) registerItem("golden_mattock",
+            new MattockItem(ToolMaterials.GOLD, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ToolMaterials.GOLD, 6, -3.0f))));
+    public static final MattockItem IRON_MATTOCK = (MattockItem) registerItem("iron_mattock",
+            new MattockItem(ToolMaterials.IRON, new Item.Settings().rarity(Rarity.COMMON)
+                    .attributeModifiers(MattockItem.createAttributeModifiers(ToolMaterials.IRON, 6, -3.1f))));
 
     //armors
         //wyrmsteel set (speedy armor)
@@ -146,6 +166,7 @@ public class ModItems {
 
     //upgrades
     public static final Item WYRMSTEEL_UPGRADE = registerItem("wyrmsteel_upgrade", ModSmithingTemplateItem.createModularUpgrade("wyrmsteel"));
+    public static final Item MULTITOOL_UPGRADE = registerItem("multitool_upgrade", ModSmithingTemplateItem.createModularUpgrade("multitool"));
 
 
     //register the items

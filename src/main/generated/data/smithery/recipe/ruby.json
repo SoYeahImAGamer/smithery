@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "ingredients": [
-    {
-      "item": "smithery:ruby_block"
-    }
-  ],
-  "result": {
-    "count": 9,
-    "id": "smithery:ruby"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0711046063f3a992226f7b857c9f7eace9eb219fa426de5947aeddf8be74c4b2
+size 203

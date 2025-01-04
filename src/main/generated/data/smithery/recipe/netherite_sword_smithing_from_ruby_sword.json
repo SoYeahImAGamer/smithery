@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_sword"
-  },
-  "result": {
-    "count": 1,
-    "id": "minecraft:netherite_sword"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:79bb04903873b16cde4e4ea7cece1e31a9848e38cf8da294f6070d759c02c007
+size 310

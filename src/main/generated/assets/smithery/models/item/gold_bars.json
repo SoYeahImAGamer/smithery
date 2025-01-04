@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:block/gold_bars"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8a7aa834db3e52b63237ce7df9c8b7577dc54d659df13010a1ab81e3901dc332
+size 104

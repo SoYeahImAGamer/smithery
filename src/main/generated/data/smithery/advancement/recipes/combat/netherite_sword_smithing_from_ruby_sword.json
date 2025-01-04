@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_netherite_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:netherite_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:netherite_sword_smithing_from_ruby_sword"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_netherite_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:netherite_sword_smithing_from_ruby_sword"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06f6ec5771773a3b341df2a7238bc5051a55bbf5803be0b33a7a4deccd9569d1
+size 645

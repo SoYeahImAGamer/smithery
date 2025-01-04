@@ -1,16 +1,3 @@
-{
-  "values": [
-    "smithery:ruby_block",
-    "smithery:nether_ruby_ore",
-    "smithery:rose_gold_grate",
-    "smithery:rose_gold_bars",
-    "smithery:rose_gold_chain",
-    "smithery:gold_grate",
-    "smithery:gold_bars",
-    "smithery:gold_chain",
-    "smithery:netherite_grate",
-    "smithery:netherite_bars",
-    "smithery:netherite_wall",
-    "smithery:netherite_chain"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:87934df11ddc439fe1ce326181da0d6b4d26c9fa0876a0d242ffe33067ec49fc
+size 380

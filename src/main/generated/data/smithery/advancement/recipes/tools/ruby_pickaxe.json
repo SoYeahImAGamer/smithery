@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_ruby": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:ruby"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:ruby_pickaxe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_ruby"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:ruby_pickaxe"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7a937c2fe65a083a5546a4ee538e2e07949a1f11e0ee56a84cb33900ea5feb0
+size 555

@@ -1,34 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "misc",
-  "ingredients": [
-    {
-      "item": "smithery:quicksilver"
-    },
-    {
-      "item": "smithery:quicksilver"
-    },
-    {
-      "item": "smithery:quicksilver"
-    },
-    {
-      "item": "smithery:quicksilver"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    }
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:077f9ce33350e783c9ae2fcd14443e479126420042258dff11eaee2f83098cf7
+size 569

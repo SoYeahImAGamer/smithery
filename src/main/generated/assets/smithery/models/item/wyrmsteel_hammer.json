@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_hammer"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b338f2a3fd179191c688f12acc5502357cde7e0bcf05cf6eea9406179c5b315e
+size 109

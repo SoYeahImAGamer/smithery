@@ -1,8 +1,3 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:chain",
-    "smithery:netherite_chain",
-    "smithery:gold_chain"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f87b35c046212da05725c7b09cfc3f0ececf52c22bf2732428f425f6e1ad4bf3
+size 129

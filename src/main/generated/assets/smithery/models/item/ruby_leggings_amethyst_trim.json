@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_leggings",
-    "layer1": "minecraft:trims/items/leggings_trim_amethyst"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:798005441562bf9b51c56b907df41af9c782d592001d81b3d410a5c54b708d5c
+size 169

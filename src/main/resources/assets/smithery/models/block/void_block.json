@@ -1,6 +1,3 @@
-{
-  "parent": "block/end_portal",
-  "textures": {
-    "particle": "minecraft:block/end_portal"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:096c9a60c51360702cdda3eb79aca5022116f45770e93471b88d515ed84be879
+size 105

@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_helmet",
-    "layer1": "minecraft:trims/items/helmet_trim_emerald"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d04dcb5728c4052f34aec3d79c37c61a7ab1bc09e21ca858629ecc9c99969d4
+size 169

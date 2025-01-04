@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_axe"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_axe"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:01bf6417c4579f7ffeb07b9d43a15de100bd3f794d2e169ee4d23c16fe31f2ec
+size 285

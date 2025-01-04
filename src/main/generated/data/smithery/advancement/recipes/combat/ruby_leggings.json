@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_ruby": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:ruby"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:ruby_leggings"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_ruby"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:ruby_leggings"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6bba29832dd33d79e40b5cd65f83eddb2c04f411bb3561b115061cc1410d91d9
+size 557

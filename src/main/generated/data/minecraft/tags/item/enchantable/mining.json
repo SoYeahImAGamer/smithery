@@ -1,20 +1,3 @@
-{
-  "values": [
-    "smithery:rose_gold_pickaxe",
-    "smithery:rose_gold_axe",
-    "smithery:rose_gold_shovel",
-    "smithery:rose_gold_hoe",
-    "smithery:ruby_pickaxe",
-    "smithery:ruby_axe",
-    "smithery:ruby_shovel",
-    "smithery:ruby_hoe",
-    "smithery:ruby_hammer",
-    "smithery:wyrmsteel_pickaxe",
-    "smithery:wyrmsteel_axe",
-    "smithery:wyrmsteel_shovel",
-    "smithery:wyrmsteel_hoe",
-    "smithery:wyrmsteel_hammer",
-    "smithery:diamond_hammer",
-    "smithery:netherite_hammer"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7074d2107233383ef6317423f492970f4aeb8d07cc07c6bc44e8663a1228fbf
+size 532

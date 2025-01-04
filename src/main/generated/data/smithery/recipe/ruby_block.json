@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "smithery:ruby"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf7ee8ee5b9d1f8b6051c7dbff1f82f15560422615a14a377ca8b3ce26ca26d3
+size 245

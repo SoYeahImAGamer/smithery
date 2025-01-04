@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_hoe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1da05926a69673e9bf7642e8ba069ae34771f71b194bcd43dcfb855b49aa733f
+size 106

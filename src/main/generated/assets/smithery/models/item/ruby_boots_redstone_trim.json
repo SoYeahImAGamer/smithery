@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_boots",
-    "layer1": "minecraft:trims/items/boots_trim_redstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e83e880a03bdabca32f9483a95824cf9719eb0ce93aa966bee824937550f865d
+size 163

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    }
-  },
-  "pattern": [
-    "r r",
-    "rrr",
-    "rrr"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_chestplate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ab0af5f704adb9483ccf77b2d67845a0fd7bfcdfad950e59fc90b6b9297e711
+size 255

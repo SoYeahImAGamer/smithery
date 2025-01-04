@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_boots",
-    "layer1": "minecraft:trims/items/boots_trim_emerald"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3955c31d64d69be5da63ea7921893eee0db143db7145e39ae28e80152193dc33
+size 167

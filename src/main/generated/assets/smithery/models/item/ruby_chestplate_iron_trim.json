@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_chestplate",
-    "layer1": "minecraft:trims/items/chestplate_trim_iron"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6375e7f9df80f513953e39db9262bf8a5caa793659e25305ee6b19a433ad134e
+size 169

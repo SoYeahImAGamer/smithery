@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "minecraft:diamond_shovel"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_shovel"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0980cfe37ce93696316d2591b71bf2c1786f9030db1d39ebdda78f2fb1f68e5
+size 295

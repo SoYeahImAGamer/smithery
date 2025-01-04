@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    " r ",
-    " s ",
-    " s "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_shovel"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a1396a8b316f43afbcccb75eb9ba291d052e89164f69faed405437a416046d2
+size 301

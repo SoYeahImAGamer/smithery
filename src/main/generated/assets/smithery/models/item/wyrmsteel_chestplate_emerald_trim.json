@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_chestplate",
-    "layer1": "minecraft:trims/items/chestplate_trim_emerald"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc681f6c79a594135ddf959132f00467a007103bb715e1663300c939379d122a
+size 177

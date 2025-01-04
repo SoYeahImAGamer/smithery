@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_iron_block": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:iron_block"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:chain_from_iron_block_stonecutting"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_iron_block"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:chain_from_iron_block_stonecutting"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:24ad8dee6c5ae890e6f8f1c6e5e5400da63f2afc7a6713ae6260db022b31da25
+size 618

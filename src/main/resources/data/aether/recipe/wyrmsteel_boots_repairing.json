@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_boots_repair",
-  "ingredient": {
-    "item": "smithery:wyrmsteel_boots"
-  },
-  "repairTime": 2000
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac722adef2248f9a610f844f3980d2c2592186561d9a077441f9592c820a1f24
+size 149

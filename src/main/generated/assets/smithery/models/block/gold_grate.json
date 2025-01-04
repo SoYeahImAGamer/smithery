@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "smithery:block/gold_grate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa5a5fbe29bd2e784d691f541652aaabb8dccf7f44c03c4a02a9490707c3c0dc
+size 102

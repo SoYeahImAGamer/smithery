@@ -27,19 +27,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+        //wyrmsteel tools
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_PICKAXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_PICKAXE);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_AXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_AXE);
+        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.DIAMOND_MATTOCK, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_MATTOCK);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_SHOVEL, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_SHOVEL);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_HOE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HOE);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_SWORD, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SWORD);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.DIAMOND_HAMMER, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HAMMER);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_PICKAXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_PICKAXE);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_AXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_AXE);
+        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_MATTOCK, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_MATTOCK);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_SHOVEL, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_SHOVEL);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HOE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HOE);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_SWORD, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SWORD);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HAMMER, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HAMMER);
 
+        //wyrmsteel armor
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_HELMET, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_HELMET);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_CHESTPLATE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_CHESTPLATE);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_LEGGINGS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_LEGGINGS);
@@ -49,9 +53,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_LEGGINGS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_LEGGINGS);
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_BOOTS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_BOOTS);
 
+        //netherite hammer and mattock
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_HAMMER, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, ModItems.NETHERITE_HAMMER);
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_HAMMER, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, ModItems.NETHERITE_HAMMER);
+        offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_MATTOCK, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, ModItems.NETHERITE_MATTOCK);
+        offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_MATTOCK, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, ModItems.NETHERITE_MATTOCK);
 
+        //ruby gear to netherite
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_HELMET, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_HELMET);
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_CHESTPLATE, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_CHESTPLATE);
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_LEGGINGS, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_LEGGINGS);
@@ -62,11 +70,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_HOE, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, Items.NETHERITE_HOE);
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_SWORD, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_SWORD);
 
+        //mattocks
+        offerBasicUpgradeRecipe(exporter, ModItems.MULTITOOL_UPGRADE, Items.IRON_AXE, Items.IRON_HOE, RecipeCategory.TOOLS, ModItems.IRON_MATTOCK);
+        offerBasicUpgradeRecipe(exporter, ModItems.MULTITOOL_UPGRADE, Items.GOLDEN_AXE, Items.GOLDEN_HOE, RecipeCategory.TOOLS, ModItems.GOLDEN_MATTOCK);
+        offerBasicUpgradeRecipe(exporter, ModItems.MULTITOOL_UPGRADE, Items.DIAMOND_AXE, Items.DIAMOND_HOE, RecipeCategory.TOOLS, ModItems.DIAMOND_MATTOCK);
+        offerBasicUpgradeRecipe(exporter, ModItems.MULTITOOL_UPGRADE, ModItems.RUBY_AXE, ModItems.RUBY_HOE, RecipeCategory.TOOLS, ModItems.RUBY_MATTOCK);
+        offerBasicUpgradeRecipe(exporter, ModItems.MULTITOOL_UPGRADE, ModItems.ROSE_GOLD_AXE, ModItems.ROSE_GOLD_HOE, RecipeCategory.TOOLS, ModItems.ROSE_GOLD_MATTOCK);
+
+        //resources
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.RUBY, RecipeCategory.DECORATIONS, ModBlocks.RUBY_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.ROSE_GOLD_INGOT, RecipeCategory.DECORATIONS, ModBlocks.ROSE_GOLD_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.BUILDING_BLOCKS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.DECORATIONS, ModBlocks.WYRMSTEEL_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.COPPER_NUGGET, RecipeCategory.MISC, Items.COPPER_INGOT);
 
+        //deco blocks
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.IRON_GRATE, Blocks.IRON_BLOCK, 8);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.IRON_BARS, Blocks.IRON_BLOCK, 24);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, Blocks.IRON_TRAPDOOR, Blocks.IRON_BLOCK, 8);
@@ -86,6 +103,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 8);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_CHAIN, Blocks.NETHERITE_BLOCK, 8);
 
+        //alloys
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WYRMSTEEL_INGOT, 1)
                 .input(ModItems.QUICKSILVER)
                 .input(ModItems.QUICKSILVER)
@@ -124,7 +142,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.ROSE_GOLD_NUGGET), conditionsFromItem(ModItems.ROSE_GOLD_NUGGET))
                 .offerTo(exporter, Identifier.of("rose_gold_ingot_from_nugget"));
 
-
+        //void blocks
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, ModBlocks.VOID_BLOCK, 4)
                 .pattern("qqq")
                 .pattern("qgq")
@@ -134,6 +152,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.QUICKSILVER), conditionsFromItem(ModItems.QUICKSILVER))
                 .offerTo(exporter, Identifier.of("void_block_crafting"));
 
+        //hamma
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.DIAMOND_HAMMER, 1)
                 .pattern(" d ")
                 .pattern(" sd")
@@ -311,6 +330,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
         offerSmithingTemplateCopyingRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.WYRMSTEEL_INGOT);
+        offerSmithingTemplateCopyingRecipe(exporter, ModItems.MULTITOOL_UPGRADE, Items.IRON_INGOT);
 
 
     }

@@ -1,10 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:netherite_block"
-  },
-  "result": {
-    "count": 8,
-    "id": "smithery:netherite_grate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b45e40f39edaaed9184e3cdee9ef779956e89bfdbc7fd305e56f21eef863b17
+size 173

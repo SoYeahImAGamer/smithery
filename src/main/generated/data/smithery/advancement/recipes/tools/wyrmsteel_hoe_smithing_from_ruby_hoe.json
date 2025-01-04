@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:wyrmsteel_hoe_smithing_from_ruby_hoe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wyrmsteel_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:wyrmsteel_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_wyrmsteel_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:wyrmsteel_hoe_smithing_from_ruby_hoe"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:53d3f5a49956b0389bbb2248ee13ff9746f8c013000ad78a78d6d9c1e9d50e04
+size 636

@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "smithery:gold_grate"
-        }
-      ],
-      "rolls": 1.0
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:14764a5a86e0429fa741979ab5096dd1d8a697e40dd0abe0c8c0d0a02f17d793
+size 335

@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/diamond_hammer"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7560cf7c241bbd642c123d9696ecf44de9c656d31fd6a6c5471b884158cd1ca
+size 107

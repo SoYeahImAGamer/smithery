@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_chestplate"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_chestplate"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb7953425cc56431b79e5cbabd13d24758c4daa40a897a872116b005b1889efe
+size 299

@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_shovel"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:75da96b020d88da7690859ba55c4fecbfce22f106a56472c7b4a9d9666dc1ed8
+size 109

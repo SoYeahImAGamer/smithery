@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_rose_gold_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:rose_gold_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:rose_gold_leggings"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_rose_gold_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:rose_gold_leggings"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9aed2065f77d824e8047d97897da8da55a05ae6d87fa6333c20ea8a3c004e12
+size 600

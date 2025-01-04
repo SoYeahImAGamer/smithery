@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_chestplate",
-    "layer1": "minecraft:trims/items/chestplate_trim_redstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e602099bc5428d3a363a2f7ee13f46dfffd8bc2be29e762f8103c91015ee87a6
+size 178

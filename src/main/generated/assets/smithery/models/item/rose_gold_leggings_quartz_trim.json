@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_leggings",
-    "layer1": "minecraft:trims/items/leggings_trim_quartz"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7edbe678c704abbd55e80c5349be1df639234f6cc991345fd9742192e84c1927
+size 172

@@ -21,11 +21,17 @@ public enum ModToolMaterial implements ToolMaterial {
     ROSE_GOLD(BlockTags.INCORRECT_FOR_STONE_TOOL, 250, 12.0F, 0.0F, 20, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.ROSE_GOLD_INGOT});
     }),
+    RUBY(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 1561, 6.0F, 2.0F, 14, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY});
+    }),
     WYRMSTEEL_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 5728, 38.29F, 2.0F, 15, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{ModItems.WYRMSTEEL_INGOT});
     }),
     DIAMOND_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 6244, 8.0F, 3.0F, 10, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.DIAMOND});
+    }),
+    RUBY_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 6244, 8.0F, 3.0F, 10, () -> {
+        return Ingredient.ofItems(new ItemConvertible[]{ModItems.RUBY});
     }),
     NETHERITE_HAMMER(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 8124, 9.0F, 4.0F, 15, () -> {
         return Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT});

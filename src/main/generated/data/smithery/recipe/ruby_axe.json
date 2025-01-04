@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    "rr ",
-    "rs ",
-    " s "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_axe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4eebe4e5e64c4a5b470e3f6a0a13624b68228ee1c59144a05cc2b31997b3a1db
+size 298

@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_leggings",
-    "layer1": "minecraft:trims/items/leggings_trim_emerald"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:48dfc73a0010c672df6c9061c4712378e5d1706409f7fc3e9f6363945b8c6e40
+size 173

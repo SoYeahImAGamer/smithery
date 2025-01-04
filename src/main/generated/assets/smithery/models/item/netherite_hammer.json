@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/netherite_hammer"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2facd400505862ff8536c99bb2ea1e9d31796989fb0a95a70a31a1ac077acaa
+size 109

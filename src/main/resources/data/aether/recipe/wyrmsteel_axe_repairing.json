@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_axe_repair",
-  "ingredient": {
-    "item": "smithery:wyrmsteel_axe"
-  },
-  "repairTime": 2000
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:08138bbe265d9dcfb36cf70c3859ab0f55f87148fd0b316725d5431ab822cce3
+size 145

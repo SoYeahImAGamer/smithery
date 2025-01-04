@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_shovel"
-  },
-  "result": {
-    "count": 1,
-    "id": "minecraft:netherite_shovel"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:89ac96f5285cfe786ee2c9bf59177db3a7da054e792f1b56f18a44ace3b6836c
+size 312

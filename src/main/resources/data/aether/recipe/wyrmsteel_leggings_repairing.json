@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_leggings_repair",
-  "ingredient": {
-    "item": "smithery:wyrmsteel_leggings"
-  },
-  "repairTime": 2000
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a893283d74c2c978e46c624cc6550d37f58600c657413ee40eafdea3733ca1ba
+size 155

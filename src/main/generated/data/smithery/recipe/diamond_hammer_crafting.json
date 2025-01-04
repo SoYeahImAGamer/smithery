@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "d": {
-      "item": "minecraft:diamond_block"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    " d ",
-    " sd",
-    "s  "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:diamond_hammer"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:76a2134f1382685a94509f2ca9ab52ecec3ced762c737dfa409a2da9da8fd036
+size 314

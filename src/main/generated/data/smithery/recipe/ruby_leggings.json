@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    }
-  },
-  "pattern": [
-    "rrr",
-    "r r",
-    "r r"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_leggings"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b63b70f86690059b4b96f41170decb0028802638e9ea663cb83589259d1d83ed
+size 253

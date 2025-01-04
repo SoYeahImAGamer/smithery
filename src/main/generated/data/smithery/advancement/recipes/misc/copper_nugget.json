@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_copper_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:copper_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:copper_nugget"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_copper_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:copper_nugget"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:81db1678c0a9f7553bcf20276820e3624670b6d5a758ae2742acc0272997146a
+size 582

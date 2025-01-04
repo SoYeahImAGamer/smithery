@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    "rrr",
-    " s ",
-    " s "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_pickaxe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5fda18c293dfaab5ac38130c14b2bf9929bc1019d2441361e628078e410ae09
+size 302

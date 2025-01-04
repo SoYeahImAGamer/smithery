@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:rose_gold_ingot"
-    }
-  },
-  "pattern": [
-    "r r",
-    "rrr",
-    "rrr"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:rose_gold_chestplate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e1b777cdcf66e718b4b3e0afee19f2fbbbced956e753b5e853c1c750d120a1a
+size 271

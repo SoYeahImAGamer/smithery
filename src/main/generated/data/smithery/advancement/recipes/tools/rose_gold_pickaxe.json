@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_rose_gold_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:rose_gold_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:rose_gold_pickaxe"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_rose_gold_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:rose_gold_pickaxe"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5ce32f212be009d08c6355ed8c348b6570f4fc39168b038818e411b624d4f7c
+size 598

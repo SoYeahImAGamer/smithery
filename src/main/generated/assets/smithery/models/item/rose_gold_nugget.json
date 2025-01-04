@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_nugget"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:88c768a2a3860493521ac689a04bada9e7b7ecf74fd7c6656abfc4d9a7bb3fec
+size 110

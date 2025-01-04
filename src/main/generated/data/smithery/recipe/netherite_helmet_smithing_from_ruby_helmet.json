@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_helmet"
-  },
-  "result": {
-    "count": 1,
-    "id": "minecraft:netherite_helmet"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5c729e52e6f117d289269045745586f9b8ffc5d83da36c1b90cb4f09de1a608e
+size 312

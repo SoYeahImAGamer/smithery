@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "smithery:diamond_hammer"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_hammer"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:090e65331d6438cad66e0987ce9b3a9b96ab4451201b9a2f776d08be221f0ab2
+size 294

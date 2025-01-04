@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_leggings_repair",
-  "ingredient": {
-    "item": "smithery:ruby_leggings"
-  },
-  "repairTime": 1500
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0e86c565433ebaadb189afbbe36d2fde237041a8fbf85c54e2ca273bb68b4cb3
+size 150

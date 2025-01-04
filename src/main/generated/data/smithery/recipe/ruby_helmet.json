@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    }
-  },
-  "pattern": [
-    "rrr",
-    "r r",
-    "   "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_helmet"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7cd0aea0c78ae8eaf54e93108d49a2d0206dae5d3280a7befb965775df2b6de
+size 251

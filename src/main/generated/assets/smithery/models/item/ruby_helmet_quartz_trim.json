@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_helmet",
-    "layer1": "minecraft:trims/items/helmet_trim_quartz"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5cb27cf3c07b69563764c7dc001a304d6a8ef1a86dda5cc6d208d86386fa3146
+size 163

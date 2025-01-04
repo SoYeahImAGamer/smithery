@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:rose_gold_ingot"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    "rr ",
-    "rs ",
-    " s "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:rose_gold_axe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e41618729c70f1579870df8747935da8750d6f0ea6b10ed45eb52e03e4bf371e
+size 314

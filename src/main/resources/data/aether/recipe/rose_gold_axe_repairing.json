@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_axe_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_axe"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f909c9bd44dbf8cb1fdb74212a97f165dd089dca4a8aeaedfb7e15b693e2c856
+size 144

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    }
-  },
-  "pattern": [
-    "   ",
-    "r r",
-    "r r"
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_boots"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:97bb9962c61b3c6c51a16368ae7dfcfedb4ccff921854804cc50b11bc7fe7f05
+size 250

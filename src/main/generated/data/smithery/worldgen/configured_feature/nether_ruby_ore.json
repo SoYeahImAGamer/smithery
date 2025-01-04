@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:ore",
-  "config": {
-    "discard_chance_on_air_exposure": 0.0,
-    "size": 8,
-    "targets": [
-      {
-        "state": {
-          "Name": "smithery:nether_ruby_ore"
-        },
-        "target": {
-          "predicate_type": "minecraft:tag_match",
-          "tag": "minecraft:base_stone_nether"
-        }
-      }
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:aedb837c4fbff0b31f9eb021b7f0e06626ac09031a7d706e5ad87cf1edb3213b
+size 348

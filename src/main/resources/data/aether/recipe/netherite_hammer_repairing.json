@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_hammer_repair",
-  "ingredient": {
-    "item": "smithery:netherite_hammer"
-  },
-  "repairTime": 4500
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:566718489e320fe87dc607b8c69f4b05cf60fe51d6a3a1b55482124905ccd244
+size 151

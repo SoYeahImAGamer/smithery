@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:block/netherite_bars"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab532886efd920881471d86c3ebbbeca348aa6b06033bc46d22cd46bb6aa73de
+size 109

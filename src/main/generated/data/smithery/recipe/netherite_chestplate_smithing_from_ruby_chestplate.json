@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_chestplate"
-  },
-  "result": {
-    "count": 1,
-    "id": "minecraft:netherite_chestplate"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e01a2d49b9190eba7b87279c9b73b9407e064b4f9692f83f038be7a6642fdce
+size 320

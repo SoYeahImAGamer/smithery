@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_shovel_repair",
-  "ingredient": {
-    "item": "smithery:wyrmsteel_shovel"
-  },
-  "repairTime": 2000
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:658eff7c5be1ec15ace9c47c9c975ac8d181953ad53dec0ffc269405a47853d3
+size 151

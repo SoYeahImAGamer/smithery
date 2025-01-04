@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_shovel"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e89f3faa5ccd072feb033c3fff0b412428d4441f5557c72b79bd902075bee4a
+size 109

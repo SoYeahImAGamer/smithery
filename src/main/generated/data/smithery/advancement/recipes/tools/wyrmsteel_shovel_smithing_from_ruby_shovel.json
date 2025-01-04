@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:wyrmsteel_shovel_smithing_from_ruby_shovel"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wyrmsteel_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:wyrmsteel_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_wyrmsteel_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:wyrmsteel_shovel_smithing_from_ruby_shovel"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27ef7ead360336d6f8e84f958584d3b31b3fe14f726458b0fe09f0c7b1f4b73c
+size 648

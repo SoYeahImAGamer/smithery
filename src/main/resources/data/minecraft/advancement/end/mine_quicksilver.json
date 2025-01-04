@@ -1,33 +1,3 @@
-{
-  "display": {
-    "icon": {
-      "id": "smithery:quicksilver",
-      "count": 1
-    },
-    "title": {
-      "translate": "advancements.end.mine_quicksilver"
-    },
-    "description": {
-      "translate": "advancements.end.mine_quicksilver.desc"
-    }
-  },
-  "parent": "minecraft:end/enter_end_gateway",
-  "criteria": {
-    "diamond": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:quicksilver"
-          }
-        ]
-      }
-    }
-  },
-  "requirements": [
-    [
-      "diamond"
-    ]
-  ],
-  "sends_telemetry_event": true
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:db876332a1ad0c3b5b3c86ef70eecec6af65e3153bb2c9298c357378e442b6ae
+size 613

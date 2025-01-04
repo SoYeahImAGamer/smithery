@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_chestplate_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_chestplate"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ada820beabd3d0d925c95642a0bb68216e94345a7ab00071ec8aead3ad7e2b0
+size 158

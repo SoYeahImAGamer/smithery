@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_shovel_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_shovel"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf04b6750bfd45e571ddf855b5ec5538945de5ac780785847e691c5485366a6a
+size 150

@@ -1,10 +1,3 @@
-{
-  "values": [
-    "smithery:wyrmsteel_pickaxe",
-    "smithery:wyrmsteel_sword",
-    "smithery:wyrmsteel_axe",
-    "smithery:wyrmsteel_shovel",
-    "smithery:wyrmsteel_hoe",
-    "smithery:wyrmsteel_hammer"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0a52da137a770232889b2aee52f8baa2c621cf6913566f0f12cb39a643ac702
+size 212

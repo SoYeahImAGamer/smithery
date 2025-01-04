@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_axe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:29e0d0166784d6ff07d3964be3d92e1d4c46448d1e5a8f64dddabb5f875c46a6
+size 106

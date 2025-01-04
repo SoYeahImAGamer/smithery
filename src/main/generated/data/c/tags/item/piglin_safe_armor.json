@@ -1,12 +1,3 @@
-{
-  "values": [
-    "minecraft:golden_helmet",
-    "minecraft:golden_chestplate",
-    "minecraft:golden_leggings",
-    "minecraft:golden_boots",
-    "smithery:rose_gold_helmet",
-    "smithery:rose_gold_chestplate",
-    "smithery:rose_gold_leggings",
-    "smithery:rose_gold_boots"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4536767e46324c218bd935ef1b1c438f7cc19dc598f25a3772e8003fbd6051a1
+size 286

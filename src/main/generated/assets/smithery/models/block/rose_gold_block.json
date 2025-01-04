@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "smithery:block/rose_gold_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9786f1a5a363e94a0a92751d6df51a28b78ef4d0286e31c440f8e9199f57b08c
+size 107

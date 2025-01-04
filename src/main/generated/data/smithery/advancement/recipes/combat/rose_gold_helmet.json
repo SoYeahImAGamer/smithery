@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_rose_gold_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:rose_gold_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:rose_gold_helmet"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_rose_gold_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:rose_gold_helmet"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:66b3fb5bb0cfb35fd9bba65bbe692a96db0904a32727fab56ad3258f42e62d90
+size 596

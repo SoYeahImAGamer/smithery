@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_pickaxe_repair",
-  "ingredient": {
-    "item": "smithery:ruby_pickaxe"
-  },
-  "repairTime": 1500
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7bf857427503be386d1a4ab92a45207fbb1a4b41331e31ae2d5866d8d3e63469
+size 148

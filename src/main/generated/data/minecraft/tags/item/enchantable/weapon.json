@@ -1,10 +1,3 @@
-{
-  "values": [
-    "smithery:rose_gold_sword",
-    "smithery:rose_gold_axe",
-    "smithery:ruby_sword",
-    "smithery:ruby_axe",
-    "smithery:wyrmsteel_sword",
-    "smithery:wyrmsteel_axe"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:22d54fa1fdca0f2c163e5eb43e8d61fd17cc9b22736f37780562e791e850724e
+size 196

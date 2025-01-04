@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e397e0a828a12a07f113ec44fbe9c0c2b11cfe57fb813e45787042147a8c541
+size 109

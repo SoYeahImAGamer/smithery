@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_helmet_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_helmet"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f913af6f584f9c3309393d7a760b557d07eaf6b41f0d1181374d46a85634e8a
+size 150

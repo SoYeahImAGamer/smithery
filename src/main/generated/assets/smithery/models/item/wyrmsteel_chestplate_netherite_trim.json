@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_chestplate",
-    "layer1": "minecraft:trims/items/chestplate_trim_netherite"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d9020561eae79e62cc9da66508a5c244bed54e60de599f13a04710aa5227f9a
+size 179

@@ -1,18 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "misc",
-  "key": {
-    "#": {
-      "item": "smithery:copper_nugget"
-    }
-  },
-  "pattern": [
-    "###",
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 1,
-    "id": "minecraft:copper_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0be5ed900dbcdf3019f4693a841f1d4034a31d831f94a03982c6090c7adeeb9a
+size 257

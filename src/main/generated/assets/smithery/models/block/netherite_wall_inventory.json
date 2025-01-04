@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "minecraft:block/netherite_block"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1147ec0a0283783458e04f0b7f3818ca606af89350a21985daceae8b9b9ad68a
+size 115

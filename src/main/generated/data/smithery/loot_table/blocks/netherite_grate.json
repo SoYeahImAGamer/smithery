@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "smithery:netherite_grate"
-        }
-      ],
-      "rolls": 1.0
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e69d148c813351eee4b6f4aaa6c5d2d75c2ec6176734208e95fa552b4b4bdf6
+size 340

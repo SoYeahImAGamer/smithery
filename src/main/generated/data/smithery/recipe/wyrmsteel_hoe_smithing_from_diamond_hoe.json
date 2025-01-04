@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "minecraft:diamond_hoe"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_hoe"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d8528f2338282d6ba84ae49d7a8016ee1cfa42047b4f1b43dc95a39cd8e67865
+size 289

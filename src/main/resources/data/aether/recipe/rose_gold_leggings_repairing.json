@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_leggings_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_leggings"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cd53c4465b0af1aed29abf2324ab67f41c6667f351f680a5ee3c92b67cdd7af
+size 154

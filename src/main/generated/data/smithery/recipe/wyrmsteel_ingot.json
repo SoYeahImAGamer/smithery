@@ -1,13 +1,3 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "category": "building",
-  "ingredients": [
-    {
-      "item": "smithery:wyrmsteel_block"
-    }
-  ],
-  "result": {
-    "count": 9,
-    "id": "smithery:wyrmsteel_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4db0045ef860a74e1eced167151f722f4ba9593b3f1f8f23e98351833f212ea
+size 219

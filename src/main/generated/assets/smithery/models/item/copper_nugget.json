@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/copper_nugget"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e2b6438bbc0fd481120c6fc59f877028e5ea7769b0e870538fbea09447059640
+size 107

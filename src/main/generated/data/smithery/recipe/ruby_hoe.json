@@ -1,21 +1,3 @@
-{
-  "type": "minecraft:crafting_shaped",
-  "category": "equipment",
-  "key": {
-    "r": {
-      "item": "smithery:ruby"
-    },
-    "s": {
-      "item": "minecraft:stick"
-    }
-  },
-  "pattern": [
-    "rr ",
-    " s ",
-    " s "
-  ],
-  "result": {
-    "count": 1,
-    "id": "smithery:ruby_hoe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1fe9e61075e85f157ec7b10f58c98c6fc8621b873a11600431cdd1f2dca33f3d
+size 298

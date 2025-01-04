@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:wyrmsteel_hammer_smithing_from_ruby_hammer"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wyrmsteel_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:wyrmsteel_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_wyrmsteel_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:wyrmsteel_hammer_smithing_from_ruby_hammer"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:886262baf12fa9b17fc334e2eebb63b7839440861d2de6f39a0011ea9720c33a
+size 648

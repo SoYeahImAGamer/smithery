@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_helmet",
-    "layer1": "minecraft:trims/items/helmet_trim_redstone"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:baf88f0701840dcd4fba4fb8130cab861b2a409ce3cc07aefd96c8259b2bc0ab
+size 170

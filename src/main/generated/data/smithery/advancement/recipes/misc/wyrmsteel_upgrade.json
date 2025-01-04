@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "smithery:wyrmsteel_upgrade"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_wyrmsteel_upgrade": {
-      "conditions": {
-        "items": [
-          {
-            "items": "smithery:wyrmsteel_upgrade"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_wyrmsteel_upgrade"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "smithery:wyrmsteel_upgrade"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4902ce63b92b7cbaf1921d8e9309f63ba3feac51d31a069a057d8897c8e536b7
+size 602

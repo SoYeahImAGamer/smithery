@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/gold_chain"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:de8c338f0334ddd0efb809a9c60d65200367768fa461abf43a15d4d097b71e3e
+size 104

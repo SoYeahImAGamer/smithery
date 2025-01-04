@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_hoe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f80dc4d5c33c62364a08bc9d93149019421786c2ef276c1468ad72daf30f9df
+size 106

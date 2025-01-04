@@ -1,16 +1,3 @@
-{
-  "variants": {
-    "axis=x": {
-      "model": "smithery:block/gold_chain",
-      "x": 90,
-      "y": 90
-    },
-    "axis=y": {
-      "model": "smithery:block/gold_chain"
-    },
-    "axis=z": {
-      "model": "smithery:block/gold_chain",
-      "x": 90
-    }
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea20c3db65ed4b1aab7bc7012e46f9d51a83f38356427bbaec59e28134ce9d29
+size 265

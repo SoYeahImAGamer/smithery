@@ -1,20 +1,3 @@
-{
-  "type": "minecraft:block",
-  "pools": [
-    {
-      "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
-      ],
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "smithery:ruby_block"
-        }
-      ],
-      "rolls": 1.0
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:002f2c4d3196ff9eafcb663999c3b7e9bb555bebb8b165c0eb1b7a5bf946c9e4
+size 335

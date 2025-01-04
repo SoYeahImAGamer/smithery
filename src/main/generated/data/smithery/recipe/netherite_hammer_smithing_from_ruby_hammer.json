@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "minecraft:netherite_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_hammer"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:netherite_hammer"
-  },
-  "template": {
-    "item": "minecraft:netherite_upgrade_smithing_template"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:0be2a177403480b3c55312e155eeee439c814222cedfecb9dec17b6ee5690f6c
+size 311

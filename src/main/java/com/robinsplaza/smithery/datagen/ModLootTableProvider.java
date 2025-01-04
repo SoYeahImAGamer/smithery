@@ -42,6 +42,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GOLD_BARS);
         addDrop(ModBlocks.GOLD_CHAIN);
 
+        addDrop(ModBlocks.ROSE_GOLD_GRATE);
+        addDrop(ModBlocks.ROSE_GOLD_BARS);
+        addDrop(ModBlocks.ROSE_GOLD_CHAIN);
+
         addDrop(ModBlocks.NETHERITE_GRATE);
         addDrop(ModBlocks.NETHERITE_BARS);
         addDrop(ModBlocks.NETHERITE_WALL);

@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_axe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8b6c92f5129e029a722e2a95924e9fb7f05de6b7649fad10c64071906167740
+size 106

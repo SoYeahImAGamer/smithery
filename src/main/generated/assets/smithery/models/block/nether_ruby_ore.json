@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "smithery:block/nether_ruby_ore"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fdc4a45746b7267b9600e23351f724fb2928d67bc18092a3a04ad0bffb292c5
+size 107

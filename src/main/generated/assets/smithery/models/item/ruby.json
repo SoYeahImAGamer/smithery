@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:960a70dd04fcd82f0a13a4aa7bfe412b8b7899e54421391cb7ce05f560af91bf
+size 98

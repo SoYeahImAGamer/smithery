@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_boots_repair",
-  "ingredient": {
-    "item": "smithery:rose_gold_boots"
-  },
-  "repairTime": 700
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f82187346f47fc1aca7f53f6bcd7f196811cdc6ea867ffbed1db9d22cd2c27df
+size 148

@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_helmet",
-    "layer1": "minecraft:trims/items/helmet_trim_netherite"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7728e79218b4e4c39d0523b185269204f8abc0d2700859789928843d544c0fd
+size 166

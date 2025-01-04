@@ -1,11 +1,3 @@
-{
-	"required": true,
-	"package": "com.robinsplaza.smithery.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"PiglinBrainMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:df730a31ff41babb5f6bf9deb286669ba6aa262acce24d3b7f0e8c1b04a48c83
+size 181

@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/ruby_pickaxe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b1fa993e39e32943c1e23edb38011bea77e830025c579a9911d995a1c67eb91
+size 105

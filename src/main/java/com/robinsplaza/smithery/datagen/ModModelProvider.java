@@ -89,10 +89,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ROSE_GOLD_NUGGET, Models.GENERATED);
         itemModelGenerator.register(ModItems.WYRMSTEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.WYRMSTEEL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MULTITOOL_UPGRADE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WYRMSTEEL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_HAMMER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.WYRMSTEEL_MATTOCK, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_SWORD, Models.HANDHELD);
@@ -100,12 +102,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_HAMMER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.RUBY_MATTOCK, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
 
         itemModelGenerator.register(ModItems.ROSE_GOLD_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.ROSE_GOLD_MATTOCK, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_HOE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.ROSE_GOLD_SWORD, Models.HANDHELD);
@@ -114,6 +118,10 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.DIAMOND_HAMMER, Models.HANDHELD);
         itemModelGenerator.register(ModItems.NETHERITE_HAMMER, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DIAMOND_MATTOCK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NETHERITE_MATTOCK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.GOLDEN_MATTOCK, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.IRON_MATTOCK, Models.HANDHELD);
         
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_HELMET));
         itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_CHESTPLATE));

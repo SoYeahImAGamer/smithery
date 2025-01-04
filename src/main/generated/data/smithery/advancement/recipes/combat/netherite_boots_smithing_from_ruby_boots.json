@@ -1,32 +1,3 @@
-{
-  "parent": "minecraft:recipes/root",
-  "criteria": {
-    "has_netherite_ingot": {
-      "conditions": {
-        "items": [
-          {
-            "items": "minecraft:netherite_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:netherite_boots_smithing_from_ruby_boots"
-      },
-      "trigger": "minecraft:recipe_unlocked"
-    }
-  },
-  "requirements": [
-    [
-      "has_the_recipe",
-      "has_netherite_ingot"
-    ]
-  ],
-  "rewards": {
-    "recipes": [
-      "minecraft:netherite_boots_smithing_from_ruby_boots"
-    ]
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b12d25c2bfaefad62a34977779403d0587829454720aa706c5ab4d89e63e07c6
+size 645

@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_ingot"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3ec39e4a355e5a8d1419158ecf3244d8b415d71d701d2f7bee0b34c73508bf05
+size 109

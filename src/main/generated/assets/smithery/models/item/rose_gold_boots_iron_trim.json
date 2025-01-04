@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/rose_gold_boots",
-    "layer1": "minecraft:trims/items/boots_trim_iron"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:72e1627db3de0508e6c03feeac5b80766ca4d46e63f39a03d202673e2c4f34b0
+size 164

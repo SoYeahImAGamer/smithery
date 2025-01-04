@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_helmet_repair",
-  "ingredient": {
-    "item": "smithery:ruby_helmet"
-  },
-  "repairTime": 1500
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:380abbd962a8586e208998c2e23719261597080283bb1ae322201f0c880ac508
+size 146

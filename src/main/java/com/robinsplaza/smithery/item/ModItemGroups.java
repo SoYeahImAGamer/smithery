@@ -15,6 +15,8 @@ public class ModItemGroups {
     public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(Smithery.MOD_ID, "smithery"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.smithery"))
                     .icon(() -> new ItemStack(Items.SMITHING_TABLE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.MULTITOOL_UPGRADE);
+
                         entries.add(ModItems.RUBY);
                         entries.add(ModBlocks.RUBY_BLOCK);
                         entries.add(ModBlocks.NETHER_RUBY_ORE);
@@ -29,6 +31,7 @@ public class ModItemGroups {
 
                         entries.add(ModItems.ROSE_GOLD_PICKAXE);
                         entries.add(ModItems.ROSE_GOLD_AXE);
+                        entries.add(ModItems.ROSE_GOLD_MATTOCK);
                         entries.add(ModItems.ROSE_GOLD_SHOVEL);
                         entries.add(ModItems.ROSE_GOLD_HOE);
                         entries.add(ModItems.ROSE_GOLD_SWORD);
@@ -41,6 +44,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY_PICKAXE);
                         entries.add(ModItems.RUBY_HAMMER);
                         entries.add(ModItems.RUBY_AXE);
+                        entries.add(ModItems.RUBY_MATTOCK);
                         entries.add(ModItems.RUBY_SHOVEL);
                         entries.add(ModItems.RUBY_HOE);
                         entries.add(ModItems.RUBY_SWORD);
@@ -55,6 +59,7 @@ public class ModItemGroups {
                         entries.add(ModItems.WYRMSTEEL_PICKAXE);
                         entries.add(ModItems.WYRMSTEEL_HAMMER);
                         entries.add(ModItems.WYRMSTEEL_AXE);
+                        entries.add(ModItems.WYRMSTEEL_MATTOCK);
                         entries.add(ModItems.WYRMSTEEL_SHOVEL);
                         entries.add(ModItems.WYRMSTEEL_HOE);
                         entries.add(ModItems.WYRMSTEEL_SWORD);
@@ -66,6 +71,10 @@ public class ModItemGroups {
 
                         entries.add(ModItems.DIAMOND_HAMMER);
                         entries.add(ModItems.NETHERITE_HAMMER);
+                        entries.add(ModItems.DIAMOND_MATTOCK);
+                        entries.add(ModItems.NETHERITE_MATTOCK);
+                        entries.add(ModItems.IRON_MATTOCK);
+                        entries.add(ModItems.GOLDEN_MATTOCK);
 
                         entries.add(ModBlocks.VOID_BLOCK);
                         entries.add(ModBlocks.IRON_GRATE);

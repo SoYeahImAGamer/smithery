@@ -1,10 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:gold_block"
-  },
-  "result": {
-    "count": 8,
-    "id": "smithery:gold_grate"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5703737f2f122a183dee662e480df1566723628d2dc73f1a062b29c0d6c98960
+size 163

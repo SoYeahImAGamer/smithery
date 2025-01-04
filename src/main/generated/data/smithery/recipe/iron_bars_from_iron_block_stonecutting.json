@@ -1,10 +1,3 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:iron_block"
-  },
-  "result": {
-    "count": 24,
-    "id": "minecraft:iron_bars"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1eee2af04fcff5504973048d82047963c8422181d48b22d47abd50dc0031b40c
+size 164

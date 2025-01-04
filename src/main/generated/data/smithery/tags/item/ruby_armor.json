@@ -1,8 +1,3 @@
-{
-  "values": [
-    "smithery:ruby_helmet",
-    "smithery:ruby_chestplate",
-    "smithery:ruby_leggings",
-    "smithery:ruby_boots"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d6ffd3690a59e142a91f8ff02d478f5dba81b84609d0fceff3a6a2fafe92abb8
+size 137

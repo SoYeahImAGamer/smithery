@@ -1,16 +1,3 @@
-{
-  "type": "minecraft:smithing_transform",
-  "addition": {
-    "item": "smithery:wyrmsteel_ingot"
-  },
-  "base": {
-    "item": "smithery:ruby_pickaxe"
-  },
-  "result": {
-    "count": 1,
-    "id": "smithery:wyrmsteel_pickaxe"
-  },
-  "template": {
-    "item": "smithery:wyrmsteel_upgrade"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a60794ebb33f9ea2148a3fc7cb907ecd307c2f238ff201bdd74ef820df424f7d
+size 293

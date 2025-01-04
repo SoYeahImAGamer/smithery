@@ -1,29 +1,3 @@
-{
-    "parent": "block/block",
-    "textures": {
-        "particle": "smithery:block/gold_chain",
-        "all": "smithery:block/gold_chain"
-    },
-    "elements": [
-        {
-            "from": [ 6.5, 0, 8 ],
-            "to": [ 9.5, 16, 8 ],
-            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45},
-            "shade": false,
-            "faces": {
-                "north": { "uv": [ 3, 0, 0, 16 ], "texture": "#all" },
-                "south": { "uv": [ 0, 0, 3, 16 ], "texture": "#all" }
-            }
-        },
-        {
-            "from": [ 8, 0, 6.5 ],
-            "to": [ 8, 16, 9.5 ],
-            "rotation": { "origin": [ 8, 8, 8 ], "axis": "y", "angle": 45},
-            "shade": false,
-            "faces": {
-                "west": { "uv": [ 6, 0, 3, 16 ], "texture": "#all" },
-                "east": { "uv": [ 3, 0, 6, 16 ], "texture": "#all" }
-            }
-        }
-    ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:127af1f88f508d53a419c62b1e32d2a6037ab205dd3c4c03041578f2bc4cbd3a
+size 915

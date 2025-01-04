@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/ruby_hoe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:084f75314ddfe4a5c120408df8c383810ed747a9f19fcb932e74d340f209a628
+size 101

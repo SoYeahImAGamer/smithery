@@ -1,6 +1,3 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "smithery:item/wyrmsteel_pickaxe"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:26d147e669f7386d7728b20938146e60311c165e0f24caa0c92fe9782334da60
+size 110

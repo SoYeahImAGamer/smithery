@@ -1,7 +1,3 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "smithery:item/ruby_chestplate",
-    "layer1": "minecraft:trims/items/chestplate_trim_amethyst"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:023a71011c84ac20eb32b29f8935ad018073277b07a0452c75501e9773878b8d
+size 173

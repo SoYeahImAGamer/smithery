@@ -1,8 +1,3 @@
-{
-  "type": "aether:repairing",
-  "group": "altar_boots_repair",
-  "ingredient": {
-    "item": "smithery:ruby_boots"
-  },
-  "repairTime": 1500
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9930842fab83a47b962848c52fc7ed2112c501e954a3420a9338f28254df5396
+size 144
