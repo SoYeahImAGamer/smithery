@@ -1,10 +1,11 @@
-// 1.21	2025-01-03T18:43:55.3059102	Smithery/Tags for minecraft:item
+// 1.21	2025-08-03T13:47:49.1608502	Smithery/Tags for minecraft:item
 3a7d9e3e11f61e73f44d24d0a006e1e50cbab0cc data\smithery\tags\item\hammers.json
 e7d383dfd801fb1469b9c148e772ada5b3ff8512 data\minecraft\tags\item\leg_armor.json
 546eead8b0557ade6314641a6e77148e6acc989e data\smithery\tags\item\ruby_armor.json
 95ae9b16aae332f4959e11e417fa36728146e46b data\c\tags\item\tools.json
 19adc1d020eea17138a3af29e86d07906d77fa30 data\minecraft\tags\item\enchantable\durability.json
 de863551584bcd606862c4f23693b6f4c640db4d data\smithery\tags\item\ruby_tools.json
+51b512a4470979e923428ac89eaaec0b89fe5709 data\minecraft\tags\item\beacon_payment_items.json
 42c24bcec896d6cef9568ee3d24257d32f6b5eec data\minecraft\tags\item\head_armor.json
 1d54b176c378f24bbfa2b91ac4ef8a79f9ecb1a2 data\minecraft\tags\item\enchantable\mining.json
 20d0e931b762d290b2d05fc57ae7712dc8ec7a5a data\minecraft\tags\item\foot_armor.json
@@ -21,6 +22,7 @@ c8b2f310fb2244001c9af91e14485b11a668cd4e data\smithery\tags\item\rose_gold_tools
 bea5caeae4a5a18025d38ba843b26dc28f6d64a7 data\minecraft\tags\item\chest_armor.json
 42dee9d6d99d613373cfe18ab77554e3444d276b data\minecraft\tags\item\trimmable_armor.json
 bf6134de58daa546e5a84ea7e922a3fe117be081 data\minecraft\tags\item\hoes.json
+31579a09147b4b8d1e079ccc92d5c421e453989d data\c\tags\item\ingots.json
 e2ce6d524fac91dae46fb5d1cc7cef6919c8ed36 data\smithery\tags\item\rose_gold_armor.json
 d2adc7f2670ee44ae9a48c14b4de5d7cbbacb7dc data\minecraft\tags\item\pickaxes.json
 e43808ff07ff84c72b18a6b4d63b1535bafceefc data\minecraft\tags\item\piglin_loved.json

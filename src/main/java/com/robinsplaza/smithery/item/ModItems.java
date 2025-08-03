@@ -1,12 +1,20 @@
 package com.robinsplaza.smithery.item;
 
+import com.google.common.collect.ImmutableMultimap;
 import com.robinsplaza.smithery.Smithery;
 import com.robinsplaza.smithery.item.custom.*;
+import net.minecraft.component.ComponentType;
+import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+
+import java.util.UUID;
 
 public class ModItems {
 
@@ -123,7 +131,7 @@ public class ModItems {
 
         //rose gold set (tougher gold)
     public static final Item ROSE_GOLD_HELMET = registerItem("rose_gold_helmet",
-            new ArmorItem(ModArmorMaterials.ROSE_GOLD_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new SpeedArmorItem(ModArmorMaterials.ROSE_GOLD_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(12)).rarity(Rarity.COMMON)));
 
     public static final Item ROSE_GOLD_CHESTPLATE = registerItem("rose_gold_chestplate",
@@ -167,6 +175,7 @@ public class ModItems {
     //upgrades
     public static final Item WYRMSTEEL_UPGRADE = registerItem("wyrmsteel_upgrade", ModSmithingTemplateItem.createModularUpgrade("wyrmsteel"));
     public static final Item MULTITOOL_UPGRADE = registerItem("multitool_upgrade", ModSmithingTemplateItem.createModularUpgrade("multitool"));
+    public static final Item ETERNAL_UPGRADE = registerItem("eternal_upgrade", ModSmithingTemplateItem.createModularUpgrade("eternal"));
 
 
     //register the items

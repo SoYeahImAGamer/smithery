@@ -15,6 +15,7 @@ import java.util.concurrent.CompletableFuture;
 public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     public static final TagKey<Block> MATTOCK_MINEABLE = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c:mineable/mattock"));
+    public static final TagKey<Block> BEACON_BLOCKS = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft:beacon_base_blocks"));
 
     public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -22,6 +23,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+
+        getOrCreateTagBuilder(BEACON_BLOCKS)
+                .add(ModBlocks.RUBY_BLOCK)
+                .add(ModBlocks.ROSE_GOLD_BLOCK)
+                .add(ModBlocks.WYRMSTEEL_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE);
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
@@ -35,6 +41,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.QUICKSILVER_ORE)
                 .add(ModBlocks.RUBY_BLOCK)
+                .add(ModBlocks.ROSE_GOLD_BLOCK)
+                .add(ModBlocks.WYRMSTEEL_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
                 .add(ModBlocks.VOID_BLOCK)
                 .add(ModBlocks.IRON_GRATE)
@@ -47,10 +55,16 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.NETHERITE_GRATE)
                 .add(ModBlocks.NETHERITE_BARS)
                 .add(ModBlocks.NETHERITE_WALL)
-                .add(ModBlocks.NETHERITE_CHAIN);
+                .add(ModBlocks.NETHERITE_CHAIN)
+                .add(ModBlocks.WYRMSTEEL_GRATE)
+                .add(ModBlocks.WYRMSTEEL_BARS)
+                .add(ModBlocks.WYRMSTEEL_WALL)
+                .add(ModBlocks.WYRMSTEEL_CHAIN);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_BLOCK)
+                .add(ModBlocks.ROSE_GOLD_BLOCK)
+                .add(ModBlocks.WYRMSTEEL_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
                 .add(ModBlocks.ROSE_GOLD_GRATE)
                 .add(ModBlocks.ROSE_GOLD_BARS)
@@ -61,7 +75,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.NETHERITE_GRATE)
                 .add(ModBlocks.NETHERITE_BARS)
                 .add(ModBlocks.NETHERITE_WALL)
-                .add(ModBlocks.NETHERITE_CHAIN);
+                .add(ModBlocks.NETHERITE_CHAIN)
+                .add(ModBlocks.WYRMSTEEL_GRATE)
+                .add(ModBlocks.WYRMSTEEL_BARS)
+                .add(ModBlocks.WYRMSTEEL_WALL)
+                .add(ModBlocks.WYRMSTEEL_CHAIN);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.QUICKSILVER_ORE);
@@ -72,7 +90,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(BlockTags.WALLS)
-                .add(ModBlocks.NETHERITE_WALL);
+                .add(ModBlocks.NETHERITE_WALL)
+                .add(ModBlocks.WYRMSTEEL_WALL);
 
     }
 }

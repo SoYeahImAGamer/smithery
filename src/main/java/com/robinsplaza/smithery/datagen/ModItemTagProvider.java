@@ -17,6 +17,8 @@ import java.util.concurrent.CompletableFuture;
 public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     private static final TagKey<Item> TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:tools"));
+    private static final TagKey<Item> INGOTS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ingots"));
+    private static final TagKey<Item> BEACON_PAYMENTS = TagKey.of(RegistryKeys.ITEM, Identifier.of("minecraft:beacon_payment_items"));
     public static final TagKey<Item> PIGLIN_SAFE = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:piglin_safe_armor"));
     private static final TagKey<Item> ROSE_GOLD_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:rose_gold_tools"));
     private static final TagKey<Item> ROSE_GOLD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:rose_gold_armor"));
@@ -33,6 +35,14 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+
+        getOrCreateTagBuilder(INGOTS)
+                .add(ModItems.ROSE_GOLD_INGOT)
+                .add(ModItems.WYRMSTEEL_INGOT);
+
+        getOrCreateTagBuilder(BEACON_PAYMENTS)
+                .add(ModItems.RUBY)
+                .addTag(INGOTS);
 
         getOrCreateTagBuilder(TOOLS)
                 .addTag(MATTOCKS)

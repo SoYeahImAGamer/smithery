@@ -33,6 +33,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.RUBY_BLOCK);
         addDrop(ModBlocks.VOID_BLOCK);
+        addDrop(ModBlocks.ROSE_GOLD_BLOCK);
+        addDrop(ModBlocks.WYRMSTEEL_BLOCK);
         addDrop(ModBlocks.NETHER_RUBY_ORE, multiOreDrops(ModBlocks.NETHER_RUBY_ORE, ModItems.RUBY, 1.0f, 1.0f));
         addDrop(ModBlocks.QUICKSILVER_ORE, multiOreDrops(ModBlocks.QUICKSILVER_ORE, ModItems.QUICKSILVER, 1.0f, 2.0f));
 

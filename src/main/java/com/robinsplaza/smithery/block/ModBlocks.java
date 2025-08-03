@@ -13,6 +13,18 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
 
+    //ore blocks
+    public static final Block RUBY_BLOCK = registerBlock("ruby_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+    public static final Block NETHER_RUBY_ORE = registerBlock("nether_ruby_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
+    public static final Block QUICKSILVER_ORE = registerBlock("quicksilver_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 8), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
+    public static final Block WYRMSTEEL_BLOCK = registerBlock("wyrmsteel_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
+    public static final Block ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
+            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
+
     //deco blocks
     public static final Block VOID_BLOCK = registerBlock("void_block",
             new VoidBlock(AbstractBlock.Settings.create().nonOpaque().hardness(0.5f).luminance(state -> 15)));
@@ -56,17 +68,18 @@ public class ModBlocks {
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.BLACK)
                     .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
-    //ore blocks
-    public static final Block RUBY_BLOCK = registerBlock("ruby_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
-    public static final Block NETHER_RUBY_ORE = registerBlock("nether_ruby_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
-    public static final Block QUICKSILVER_ORE = registerBlock("quicksilver_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 8), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
-    public static final Block WYRMSTEEL_BLOCK = registerBlock("wyrmsteel_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
-    public static final Block ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
+    public static final Block WYRMSTEEL_GRATE = registerBlock("wyrmsteel_grate",
+            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.MAGENTA)
+                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block WYRMSTEEL_BARS = registerBlock("wyrmsteel_bars",
+            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).nonOpaque().mapColor(MapColor.MAGENTA)
+                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block WYRMSTEEL_WALL = registerBlock("wyrmsteel_wall",
+            new WallBlock(AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK).mapColor(MapColor.MAGENTA)
+                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block WYRMSTEEL_CHAIN = registerBlock("wyrmsteel_chain",
+            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.MAGENTA)
+                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
 
     private static Block registerBlock(String name, Block block){

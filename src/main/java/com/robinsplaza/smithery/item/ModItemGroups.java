@@ -88,6 +88,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.NETHERITE_BARS);
                         entries.add(ModBlocks.NETHERITE_WALL);
                         entries.add(ModBlocks.NETHERITE_CHAIN);
+                        entries.add(ModBlocks.WYRMSTEEL_GRATE);
+                        entries.add(ModBlocks.WYRMSTEEL_BARS);
+                        entries.add(ModBlocks.WYRMSTEEL_WALL);
+                        entries.add(ModBlocks.WYRMSTEEL_CHAIN);
 
                     }).build());
 

@@ -15,6 +15,7 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
@@ -44,14 +45,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HAMMER, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HAMMER);
 
         //wyrmsteel armor
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_HELMET, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_HELMET);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_CHESTPLATE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_CHESTPLATE);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_LEGGINGS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_LEGGINGS);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_BOOTS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_BOOTS);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HELMET, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_HELMET);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_CHESTPLATE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_CHESTPLATE);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_LEGGINGS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_LEGGINGS);
-        offerBasicUpgradeRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_BOOTS, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_BOOTS);
+        //moved to manual recipes bc I cannot figure out for the life of me how to add attribute modifiers to the items themselves
 
         //netherite hammer and mattock
         offerBasicUpgradeRecipe(exporter, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.DIAMOND_HAMMER, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, ModItems.NETHERITE_HAMMER);
@@ -102,6 +96,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_BARS, Blocks.NETHERITE_BLOCK, 24);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 8);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_CHAIN, Blocks.NETHERITE_BLOCK, 8);
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_GRATE, ModBlocks.WYRMSTEEL_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_BARS, ModBlocks.WYRMSTEEL_BLOCK, 24);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_WALL, ModBlocks.WYRMSTEEL_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_CHAIN, ModBlocks.WYRMSTEEL_BLOCK, 8);
 
         //alloys
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WYRMSTEEL_INGOT, 1)
@@ -329,9 +328,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(exporter, Identifier.of("ruby_boots"));
 
 
-        offerSmithingTemplateCopyingRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, ModItems.WYRMSTEEL_INGOT);
+        offerSmithingTemplateCopyingRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.END_STONE);
         offerSmithingTemplateCopyingRecipe(exporter, ModItems.MULTITOOL_UPGRADE, Items.IRON_INGOT);
-
 
     }
 

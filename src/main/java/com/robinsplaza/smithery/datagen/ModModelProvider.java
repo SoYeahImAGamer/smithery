@@ -21,10 +21,11 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         BlockStateModelGenerator.BlockTexturePool netheritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHERITE_BLOCK);
+        BlockStateModelGenerator.BlockTexturePool wyrmsteelPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WYRMSTEEL_BLOCK);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROSE_GOLD_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WYRMSTEEL_BLOCK);
+        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WYRMSTEEL_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUICKSILVER_ORE);
 
@@ -47,6 +48,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerAxisRotated(ModBlocks.NETHERITE_CHAIN, ModelIds.getBlockModelId(ModBlocks.NETHERITE_CHAIN));
         blockStateModelGenerator.registerItemModel(ModBlocks.NETHERITE_CHAIN.asItem());
         netheritePool.wall(ModBlocks.NETHERITE_WALL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WYRMSTEEL_GRATE);
+        this.registerGenericBars(blockStateModelGenerator, ModBlocks.WYRMSTEEL_BARS);
+        blockStateModelGenerator.registerAxisRotated(ModBlocks.WYRMSTEEL_CHAIN, ModelIds.getBlockModelId(ModBlocks.WYRMSTEEL_CHAIN));
+        blockStateModelGenerator.registerItemModel(ModBlocks.WYRMSTEEL_CHAIN.asItem());
+        wyrmsteelPool.wall(ModBlocks.WYRMSTEEL_WALL);
 
     }
 
@@ -90,6 +97,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.WYRMSTEEL_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.WYRMSTEEL_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.MULTITOOL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ETERNAL_UPGRADE, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.WYRMSTEEL_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.WYRMSTEEL_HAMMER, Models.HANDHELD);
