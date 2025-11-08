@@ -18,6 +18,7 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -94,13 +95,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_GRATE, Blocks.NETHERITE_BLOCK, 8);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_BARS, Blocks.NETHERITE_BLOCK, 24);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 4);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_CHAIN, Blocks.NETHERITE_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_STAIRS, Blocks.NETHERITE_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_SLAB, Blocks.NETHERITE_BLOCK, 8);
 
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_GRATE, ModBlocks.WYRMSTEEL_BLOCK, 8);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_BARS, ModBlocks.WYRMSTEEL_BLOCK, 24);
-        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_WALL, ModBlocks.WYRMSTEEL_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_WALL, ModBlocks.WYRMSTEEL_BLOCK, 4);
         offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_CHAIN, ModBlocks.WYRMSTEEL_BLOCK, 8);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_STAIRS, ModBlocks.WYRMSTEEL_BLOCK, 4);
+        offerStonecuttingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_SLAB, ModBlocks.WYRMSTEEL_BLOCK, 8);
 
         //alloys
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WYRMSTEEL_INGOT, 1)
@@ -326,6 +331,53 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('r', ModItems.RUBY)
                 .criterion(hasItem(ModItems.RUBY), conditionsFromItem(ModItems.RUBY))
                 .offerTo(exporter, Identifier.of("ruby_boots"));
+
+        //Spurs
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_SPUR, 8)
+                .pattern("###")
+                .pattern("#!#")
+                .pattern("###")
+                .input('#', Items.COPPER_INGOT)
+                .input('!', Items.DIAMOND)
+                .criterion(hasItem(Items.DIAMOND), conditionsFromItem(Items.DIAMOND))
+                .offerTo(exporter, Identifier.of("copper_spur_from_diamond"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_SPUR, 1)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .input(ModItems.COPPER_SPUR)
+                .criterion(hasItem(ModItems.COPPER_SPUR), conditionsFromItem(ModItems.COPPER_SPUR))
+                .offerTo(exporter, Identifier.of("silver_spur_from_copper_spur"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GOLDEN_SPUR, 1)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .input(ModItems.SILVER_SPUR)
+                .criterion(hasItem(ModItems.SILVER_SPUR), conditionsFromItem(ModItems.SILVER_SPUR))
+                .offerTo(exporter, Identifier.of("golden_spur_from_silver_spur"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SILVER_SPUR, 8)
+                .input(ModItems.GOLDEN_SPUR)
+                .criterion(hasItem(ModItems.GOLDEN_SPUR), conditionsFromItem(ModItems.GOLDEN_SPUR))
+                .offerTo(exporter, Identifier.of("silver_spur_from_golden_spur"));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COPPER_SPUR, 8)
+                .input(ModItems.SILVER_SPUR)
+                .criterion(hasItem(ModItems.SILVER_SPUR), conditionsFromItem(ModItems.SILVER_SPUR))
+                .offerTo(exporter, Identifier.of("copper_spur_from_silver_spur"));
+
+        offerSmelting(exporter, List.of(ModItems.SILVER_SPUR), RecipeCategory.MISC, Items.DIAMOND, 0.3f, 200, "spur_to_diamond");
 
 
         offerSmithingTemplateCopyingRecipe(exporter, ModItems.WYRMSTEEL_UPGRADE, Items.END_STONE);

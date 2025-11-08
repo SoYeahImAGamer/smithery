@@ -18,6 +18,14 @@ import java.util.UUID;
 
 public class ModItems {
 
+    //spurs
+    public static final Item COPPER_SPUR = (Item) registerItem("copper_spur",
+            new Item(new Item.Settings()));
+    public static final Item SILVER_SPUR = (Item) registerItem("silver_spur",
+            new Item(new Item.Settings()));
+    public static final Item GOLDEN_SPUR = (Item) registerItem("golden_spur",
+            new Item(new Item.Settings()));
+
     //tools
         //mirror (figure out teleport mechanics before adding recipe)
     public static final MirrorItem MAGIC_MIRROR = (MirrorItem) registerItem("magic_mirror",

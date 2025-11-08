@@ -67,6 +67,10 @@ public class ModBlocks {
     public static final Block NETHERITE_CHAIN = registerBlock("netherite_chain",
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.BLACK)
                     .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block NETHERITE_STAIRS = registerBlock("netherite_stairs",
+            new StairsBlock(Blocks.NETHERITE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK)));
+    public static final Block NETHERITE_SLAB = registerBlock("netherite_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK)));
 
     public static final Block WYRMSTEEL_GRATE = registerBlock("wyrmsteel_grate",
             new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.MAGENTA)
@@ -80,6 +84,10 @@ public class ModBlocks {
     public static final Block WYRMSTEEL_CHAIN = registerBlock("wyrmsteel_chain",
             new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.MAGENTA)
                     .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block WYRMSTEEL_STAIRS = registerBlock("wyrmsteel_stairs",
+            new StairsBlock(WYRMSTEEL_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK)));
+    public static final Block WYRMSTEEL_SLAB = registerBlock("wyrmsteel_slab",
+            new SlabBlock(AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK)));
 
 
     private static Block registerBlock(String name, Block block){
