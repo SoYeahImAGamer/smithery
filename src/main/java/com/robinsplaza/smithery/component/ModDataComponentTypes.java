@@ -1,22 +1,21 @@
 package com.robinsplaza.smithery.component;
 
 import com.robinsplaza.smithery.Smithery;
-import net.minecraft.component.ComponentType;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.BlockPos;
-
 import java.util.function.UnaryOperator;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponentType;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 
 public class ModDataComponentTypes {
-    public static final ComponentType<BlockPos> COORDINATES =
-            register("coordinates", builder -> builder.codec(BlockPos.CODEC));
+    public static final DataComponentType<BlockPos> COORDINATES =
+            register("coordinates", builder -> builder.persistent(BlockPos.CODEC));
 
 
-    private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
-        return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(Smithery.MOD_ID, name),
-                builderOperator.apply(ComponentType.builder()).build());
+    private static <T>DataComponentType<T> register(String name, UnaryOperator<DataComponentType.Builder<T>> builderOperator) {
+        return Registry.register(BuiltInRegistries.DATA_COMPONENT_TYPE, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, name),
+                builderOperator.apply(DataComponentType.builder()).build());
     }
 
     public static void registerDataComponentTypes() {

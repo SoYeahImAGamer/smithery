@@ -2,69 +2,78 @@ package com.robinsplaza.smithery.datagen;
 
 import com.robinsplaza.smithery.block.ModBlocks;
 import com.robinsplaza.smithery.item.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.ItemTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import java.util.concurrent.CompletableFuture;
 
-public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
+public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
-    private static final TagKey<Item> TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:tools"));
-    private static final TagKey<Item> INGOTS = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:ingots"));
-    private static final TagKey<Item> BEACON_PAYMENTS = TagKey.of(RegistryKeys.ITEM, Identifier.of("minecraft:beacon_payment_items"));
-    public static final TagKey<Item> PIGLIN_SAFE = TagKey.of(RegistryKeys.ITEM, Identifier.of("c:piglin_safe_armor"));
-    private static final TagKey<Item> ROSE_GOLD_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:rose_gold_tools"));
-    private static final TagKey<Item> ROSE_GOLD_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:rose_gold_armor"));
-    private static final TagKey<Item> RUBY_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:ruby_tools"));
-    private static final TagKey<Item> RUBY_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:ruby_armor"));
-    private static final TagKey<Item> WYRMSTEEL_TOOLS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:wyrmsteel_tools"));
-    private static final TagKey<Item> WYRMSTEEL_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:wyrmsteel_armor"));
-    private static final TagKey<Item> HAMMERS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:hammers"));
-    private static final TagKey<Item> MATTOCKS = TagKey.of(RegistryKeys.ITEM, Identifier.of("smithery:mattocks"));
+    private static final TagKey<Item> TOOLS = TagKey.create(Registries.ITEM, Identifier.parse("c:tools"));
+    private static final TagKey<Item> INGOTS = TagKey.create(Registries.ITEM, Identifier.parse("c:ingots"));
+    public static final TagKey<Item> COPPER_NUGGETS = TagKey.create(Registries.ITEM, Identifier.parse("c:nuggets/copper"));
+    private static final TagKey<Item> BEACON_PAYMENTS = TagKey.create(Registries.ITEM, Identifier.parse("minecraft:beacon_payment_items"));
+    public static final TagKey<Item> PIGLIN_SAFE = TagKey.create(Registries.ITEM, Identifier.parse("minecraft:piglin_safe_armor"));
+    private static final TagKey<Item> ROSE_GOLD_TOOLS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:rose_gold_tools"));
+    private static final TagKey<Item> ROSE_GOLD_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("smithery:rose_gold_armor"));
+    public static final TagKey<Item> ROSE_GOLD_REPAIR_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:rose_gold_repair_materials"));
+    private static final TagKey<Item> RUBY_TOOLS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:ruby_tools"));
+    private static final TagKey<Item> RUBY_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("smithery:ruby_armor"));
+    public static final TagKey<Item> RUBY_REPAIR_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:ruby_repair_materials"));
+    private static final TagKey<Item> WYRMSTEEL_TOOLS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:wyrmsteel_tools"));
+    private static final TagKey<Item> WYRMSTEEL_ARMOR = TagKey.create(Registries.ITEM, Identifier.parse("smithery:wyrmsteel_armor"));
+    public static final TagKey<Item> WYRMSTEEL_REPAIR_MATERIALS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:wyrmsteel_repair_materials"));
+    private static final TagKey<Item> HAMMERS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:hammers"));
+    private static final TagKey<Item> MATTOCKS = TagKey.create(Registries.ITEM, Identifier.parse("smithery:mattocks"));
 
-    public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> completableFuture) {
+    public ModItemTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
         super(output, completableFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider arg) {
 
-        getOrCreateTagBuilder(INGOTS)
+        valueLookupBuilder(COPPER_NUGGETS)
+                .add(ModItems.COPPER_NUGGET);
+
+        valueLookupBuilder(INGOTS)
                 .add(ModItems.ROSE_GOLD_INGOT)
                 .add(ModItems.WYRMSTEEL_INGOT);
 
-        getOrCreateTagBuilder(BEACON_PAYMENTS)
+        valueLookupBuilder(BEACON_PAYMENTS)
                 .add(ModItems.RUBY)
                 .addTag(INGOTS);
 
-        getOrCreateTagBuilder(TOOLS)
+        valueLookupBuilder(TOOLS)
                 .addTag(MATTOCKS)
                 .addTag(HAMMERS)
                 .addTag(ROSE_GOLD_TOOLS)
                 .addTag(RUBY_TOOLS)
                 .addTag(WYRMSTEEL_TOOLS);
 
-        getOrCreateTagBuilder(ROSE_GOLD_TOOLS)
+        valueLookupBuilder(ROSE_GOLD_TOOLS)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.ROSE_GOLD_SHOVEL)
                 .add(ModItems.ROSE_GOLD_HOE)
                 .add(ModItems.ROSE_GOLD_SWORD);
 
-        getOrCreateTagBuilder(ROSE_GOLD_ARMOR)
+        valueLookupBuilder(ROSE_GOLD_ARMOR)
                 .add(ModItems.ROSE_GOLD_HELMET)
                 .add(ModItems.ROSE_GOLD_CHESTPLATE)
                 .add(ModItems.ROSE_GOLD_LEGGINGS)
                 .add(ModItems.ROSE_GOLD_BOOTS);
 
-        getOrCreateTagBuilder(RUBY_TOOLS)
+        valueLookupBuilder(ROSE_GOLD_REPAIR_MATERIALS)
+                .add(ModItems.ROSE_GOLD_INGOT);
+
+        valueLookupBuilder(RUBY_TOOLS)
                 .add(ModItems.RUBY_PICKAXE)
                 .add(ModItems.RUBY_SWORD)
                 .add(ModItems.RUBY_AXE)
@@ -72,13 +81,16 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.RUBY_HOE)
                 .add(ModItems.RUBY_HAMMER);
 
-        getOrCreateTagBuilder(RUBY_ARMOR)
+        valueLookupBuilder(RUBY_ARMOR)
                 .add(ModItems.RUBY_HELMET)
                 .add(ModItems.RUBY_CHESTPLATE)
                 .add(ModItems.RUBY_LEGGINGS)
                 .add(ModItems.RUBY_BOOTS);
 
-        getOrCreateTagBuilder(WYRMSTEEL_TOOLS)
+        valueLookupBuilder(RUBY_REPAIR_MATERIALS)
+                .add(ModItems.RUBY);
+
+        valueLookupBuilder(WYRMSTEEL_TOOLS)
                 .add(ModItems.WYRMSTEEL_PICKAXE)
                 .add(ModItems.WYRMSTEEL_SWORD)
                 .add(ModItems.WYRMSTEEL_AXE)
@@ -86,19 +98,22 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WYRMSTEEL_HOE)
                 .add(ModItems.WYRMSTEEL_HAMMER);
 
-        getOrCreateTagBuilder(WYRMSTEEL_ARMOR)
+        valueLookupBuilder(WYRMSTEEL_ARMOR)
                 .add(ModItems.WYRMSTEEL_HELMET)
                 .add(ModItems.WYRMSTEEL_CHESTPLATE)
                 .add(ModItems.WYRMSTEEL_LEGGINGS)
                 .add(ModItems.WYRMSTEEL_BOOTS);
 
-        getOrCreateTagBuilder(HAMMERS)
+        valueLookupBuilder(WYRMSTEEL_REPAIR_MATERIALS)
+                .add(ModItems.WYRMSTEEL_INGOT);
+
+        valueLookupBuilder(HAMMERS)
                 .add(ModItems.DIAMOND_HAMMER)
                 .add(ModItems.RUBY_HAMMER)
                 .add(ModItems.NETHERITE_HAMMER)
                 .add(ModItems.WYRMSTEEL_HAMMER);
 
-        getOrCreateTagBuilder(MATTOCKS)
+        valueLookupBuilder(MATTOCKS)
                 .add(ModItems.WYRMSTEEL_MATTOCK)
                 .add(ModItems.NETHERITE_MATTOCK)
                 .add(ModItems.DIAMOND_MATTOCK)
@@ -107,7 +122,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.IRON_MATTOCK)
                 .add(ModItems.GOLDEN_MATTOCK);
 
-        getOrCreateTagBuilder(ItemTags.MINING_ENCHANTABLE)
+        valueLookupBuilder(ItemTags.MINING_ENCHANTABLE)
                 .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.ROSE_GOLD_AXE)
@@ -126,7 +141,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DIAMOND_HAMMER)
                 .add(ModItems.NETHERITE_HAMMER);
 
-        getOrCreateTagBuilder(ItemTags.WEAPON_ENCHANTABLE)
+        valueLookupBuilder(ItemTags.WEAPON_ENCHANTABLE)
                 .add(ModItems.ROSE_GOLD_SWORD)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.RUBY_SWORD)
@@ -134,7 +149,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WYRMSTEEL_SWORD)
                 .add(ModItems.WYRMSTEEL_AXE);
 
-        getOrCreateTagBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
+        valueLookupBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .add(ModItems.ROSE_GOLD_SWORD)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.RUBY_SWORD)
@@ -142,7 +157,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WYRMSTEEL_SWORD)
                 .add(ModItems.WYRMSTEEL_AXE);
 
-        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+        valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.ROSE_GOLD_AXE)
@@ -164,30 +179,30 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DIAMOND_HAMMER)
                 .add(ModItems.NETHERITE_HAMMER);
 
-        getOrCreateTagBuilder(ItemTags.SWORDS)
+        valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.ROSE_GOLD_SWORD)
                 .add(ModItems.RUBY_SWORD)
                 .add(ModItems.WYRMSTEEL_SWORD);
-        getOrCreateTagBuilder(ItemTags.PICKAXES)
+        valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.RUBY_PICKAXE)
                 .add(ModItems.ROSE_GOLD_PICKAXE)
                 .add(ModItems.WYRMSTEEL_PICKAXE);
-        getOrCreateTagBuilder(ItemTags.SHOVELS)
+        valueLookupBuilder(ItemTags.SHOVELS)
                 .add(ModItems.ROSE_GOLD_SHOVEL)
                 .add(ModItems.RUBY_SHOVEL)
                 .add(ModItems.WYRMSTEEL_SHOVEL);
-        getOrCreateTagBuilder(ItemTags.AXES)
+        valueLookupBuilder(ItemTags.AXES)
                 .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.WYRMSTEEL_AXE);
-        getOrCreateTagBuilder(ItemTags.HOES)
+        valueLookupBuilder(ItemTags.HOES)
                 .addTag(MATTOCKS)
                 .add(ModItems.ROSE_GOLD_HOE)
                 .add(ModItems.RUBY_HOE)
                 .add(ModItems.WYRMSTEEL_HOE);
 
-        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+        valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.ROSE_GOLD_HELMET)
                 .add(ModItems.ROSE_GOLD_CHESTPLATE)
                 .add(ModItems.ROSE_GOLD_LEGGINGS)
@@ -201,34 +216,34 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.WYRMSTEEL_LEGGINGS)
                 .add(ModItems.WYRMSTEEL_BOOTS);
 
-        getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+        valueLookupBuilder(ItemTags.HEAD_ARMOR)
                 .add(ModItems.ROSE_GOLD_HELMET)
                 .add(ModItems.RUBY_HELMET)
                 .add(ModItems.WYRMSTEEL_HELMET);
 
-        getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+        valueLookupBuilder(ItemTags.CHEST_ARMOR)
                 .add(ModItems.ROSE_GOLD_CHESTPLATE)
                 .add(ModItems.RUBY_CHESTPLATE)
                 .add(ModItems.WYRMSTEEL_CHESTPLATE);
 
-        getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+        valueLookupBuilder(ItemTags.LEG_ARMOR)
                 .add(ModItems.ROSE_GOLD_LEGGINGS)
                 .add(ModItems.RUBY_LEGGINGS)
                 .add(ModItems.WYRMSTEEL_LEGGINGS);
 
-        getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+        valueLookupBuilder(ItemTags.FOOT_ARMOR)
                 .add(ModItems.ROSE_GOLD_BOOTS)
                 .add(ModItems.RUBY_BOOTS)
                 .add(ModItems.WYRMSTEEL_BOOTS);
 
-        getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
+        valueLookupBuilder(ItemTags.PIGLIN_LOVED)
                 .add(ModItems.ROSE_GOLD_HELMET)
                 .add(ModItems.ROSE_GOLD_CHESTPLATE)
                 .add(ModItems.ROSE_GOLD_LEGGINGS)
                 .add(ModItems.ROSE_GOLD_BOOTS)
                 .add(ModItems.ROSE_GOLD_INGOT);
 
-        getOrCreateTagBuilder(PIGLIN_SAFE)
+        valueLookupBuilder(PIGLIN_SAFE)
                 .add(Items.GOLDEN_HELMET)
                 .add(Items.GOLDEN_CHESTPLATE)
                 .add(Items.GOLDEN_LEGGINGS)

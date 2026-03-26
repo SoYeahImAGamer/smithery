@@ -1,7 +1,6 @@
 package com.robinsplaza.smithery;
 
 import com.robinsplaza.smithery.block.ModBlocks;
-import com.robinsplaza.smithery.block.VoidBlockEntity;
 import com.robinsplaza.smithery.component.ModDataComponentTypes;
 import com.robinsplaza.smithery.item.ModItemGroups;
 import com.robinsplaza.smithery.item.ModItems;
@@ -10,13 +9,6 @@ import com.robinsplaza.smithery.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,9 +37,4 @@ public class Smithery implements ModInitializer {
 		ModDataComponentTypes.registerDataComponentTypes();
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
 	}
-	public static final BlockEntityType<VoidBlockEntity> VOID_BLOCK_ENTITY_TYPE = Registry.register(
-			Registries.BLOCK_ENTITY_TYPE,
-			Identifier.of(MOD_ID, "void_block_entity_type"),
-			BlockEntityType.Builder.create(VoidBlockEntity::new, ModBlocks.VOID_BLOCK).build(null)
-	);
 }

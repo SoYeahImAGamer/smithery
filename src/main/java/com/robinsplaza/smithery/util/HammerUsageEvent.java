@@ -2,13 +2,13 @@ package com.robinsplaza.smithery.util;
 
 import com.robinsplaza.smithery.item.custom.HammerItem;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.HashSet;
@@ -19,22 +19,22 @@ public class HammerUsageEvent implements PlayerBlockBreakEvents.Before{
     private static final Set<BlockPos> HARVESTED_BLOCKS = new HashSet<>();
 
     @Override
-    public boolean beforeBlockBreak(World world, PlayerEntity player, BlockPos pos,
+    public boolean beforeBlockBreak(Level world, Player player, BlockPos pos,
                                     BlockState state, @Nullable BlockEntity blockEntity) {
-        ItemStack mainHandItem = player.getMainHandStack();
+        ItemStack mainHandItem = player.getMainHandItem();
 
-        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayerEntity serverPlayer) {
+        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
             if(HARVESTED_BLOCKS.contains(pos)) {
                 return true;
             }
 
             for(BlockPos position : HammerItem.getBlocksToBeDestroyed(1, pos, serverPlayer)) {
-                if(pos == position || !hammer.isCorrectForDrops(mainHandItem, world.getBlockState(position))) {
+                if(pos == position || !hammer.isCorrectToolForDrops(mainHandItem, world.getBlockState(position))) {
                     continue;
                 }
 
                 HARVESTED_BLOCKS.add(position);
-                serverPlayer.interactionManager.tryBreakBlock(position);
+                serverPlayer.gameMode.destroyBlock(position);
                 HARVESTED_BLOCKS.remove(position);
             }
         }

@@ -2,72 +2,67 @@ package com.robinsplaza.smithery.datagen;
 
 import com.robinsplaza.smithery.block.ModBlocks;
 import com.robinsplaza.smithery.item.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.loot.LootTable;
-import net.minecraft.loot.entry.ItemEntry;
-import net.minecraft.loot.entry.LootPoolEntry;
-import net.minecraft.loot.function.ApplyBonusLootFunction;
-import net.minecraft.loot.function.SetCountLootFunction;
-import net.minecraft.loot.provider.number.UniformLootNumberProvider;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.entry.RegistryEntry;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.Enchantments;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
+import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
+import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import java.util.concurrent.CompletableFuture;
 
-public class ModLootTableProvider extends FabricBlockLootTableProvider {
+public class ModLootTableProvider extends FabricBlockLootSubProvider {
 
-    public ModLootTableProvider(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+    public ModLootTableProvider(FabricPackOutput dataOutput, CompletableFuture<HolderLookup.Provider> registryLookup) {
         super(dataOutput, registryLookup);
     }
 
     @Override
     public void generate() {
 
-        addDrop(ModBlocks.RUBY_BLOCK);
-        addDrop(ModBlocks.VOID_BLOCK);
-        addDrop(ModBlocks.ROSE_GOLD_BLOCK);
-        addDrop(ModBlocks.WYRMSTEEL_BLOCK);
-        addDrop(ModBlocks.NETHER_RUBY_ORE, multiOreDrops(ModBlocks.NETHER_RUBY_ORE, ModItems.RUBY, 1.0f, 1.0f));
-        addDrop(ModBlocks.QUICKSILVER_ORE, multiOreDrops(ModBlocks.QUICKSILVER_ORE, ModItems.QUICKSILVER, 1.0f, 2.0f));
+        dropSelf(ModBlocks.RUBY_BLOCK);
+        dropSelf(ModBlocks.ROSE_GOLD_BLOCK);
+        dropSelf(ModBlocks.WYRMSTEEL_BLOCK);
+        add(ModBlocks.NETHER_RUBY_ORE, multiOreDrops(ModBlocks.NETHER_RUBY_ORE, ModItems.RUBY, 1.0f, 1.0f));
+        add(ModBlocks.QUICKSILVER_ORE, multiOreDrops(ModBlocks.QUICKSILVER_ORE, ModItems.QUICKSILVER, 1.0f, 2.0f));
 
-        addDrop(ModBlocks.IRON_GRATE);
+        dropSelf(ModBlocks.IRON_GRATE);
 
-        addDrop(ModBlocks.GOLD_GRATE);
-        addDrop(ModBlocks.GOLD_BARS);
-        addDrop(ModBlocks.GOLD_CHAIN);
+        dropSelf(ModBlocks.GOLD_GRATE);
+        dropSelf(ModBlocks.GOLD_BARS);
+        dropSelf(ModBlocks.GOLD_CHAIN);
 
-        addDrop(ModBlocks.ROSE_GOLD_GRATE);
-        addDrop(ModBlocks.ROSE_GOLD_BARS);
-        addDrop(ModBlocks.ROSE_GOLD_CHAIN);
+        dropSelf(ModBlocks.ROSE_GOLD_GRATE);
+        dropSelf(ModBlocks.ROSE_GOLD_BARS);
+        dropSelf(ModBlocks.ROSE_GOLD_CHAIN);
 
-        addDrop(ModBlocks.NETHERITE_GRATE);
-        addDrop(ModBlocks.NETHERITE_BARS);
-        addDrop(ModBlocks.NETHERITE_WALL);
-        addDrop(ModBlocks.NETHERITE_CHAIN);
-        addDrop(ModBlocks.NETHERITE_STAIRS);
-        addDrop(ModBlocks.NETHERITE_SLAB);
+        dropSelf(ModBlocks.NETHERITE_GRATE);
+        dropSelf(ModBlocks.NETHERITE_BARS);
+        dropSelf(ModBlocks.NETHERITE_WALL);
+        dropSelf(ModBlocks.NETHERITE_CHAIN);
+        dropSelf(ModBlocks.NETHERITE_STAIRS);
+        dropSelf(ModBlocks.NETHERITE_SLAB);
 
-        addDrop(ModBlocks.WYRMSTEEL_GRATE);
-        addDrop(ModBlocks.WYRMSTEEL_BARS);
-        addDrop(ModBlocks.WYRMSTEEL_WALL);
-        addDrop(ModBlocks.WYRMSTEEL_CHAIN);
-        addDrop(ModBlocks.WYRMSTEEL_STAIRS);
-        addDrop(ModBlocks.WYRMSTEEL_SLAB);
+        dropSelf(ModBlocks.WYRMSTEEL_GRATE);
+        dropSelf(ModBlocks.WYRMSTEEL_BARS);
+        dropSelf(ModBlocks.WYRMSTEEL_WALL);
+        dropSelf(ModBlocks.WYRMSTEEL_CHAIN);
+        dropSelf(ModBlocks.WYRMSTEEL_STAIRS);
+        dropSelf(ModBlocks.WYRMSTEEL_SLAB);
 
     }
 
     public LootTable.Builder multiOreDrops(Block drop, Item idrop, float min, float max) {
-        RegistryWrapper.Impl<Enchantment> impl = this.registryLookup.getWrapperOrThrow(RegistryKeys.ENCHANTMENT);
-        return this.dropsWithSilkTouch(drop, (LootPoolEntry.Builder)this.applyExplosionDecay(drop, ItemEntry.builder(idrop)
-                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(min, max)))
-                .apply(ApplyBonusLootFunction.oreDrops(impl.getOrThrow(Enchantments.FORTUNE)))));
+        HolderLookup.RegistryLookup<Enchantment> impl = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+        return this.createSilkTouchDispatchTable(drop, (LootPoolEntryContainer.Builder)this.applyExplosionDecay(drop, LootItem.lootTableItem(idrop)
+                .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
+                .apply(ApplyBonusCount.addOreBonusCount(impl.getOrThrow(Enchantments.FORTUNE)))));
     }
 }

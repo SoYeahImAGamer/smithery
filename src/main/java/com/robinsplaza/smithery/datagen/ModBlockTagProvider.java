@@ -1,50 +1,48 @@
 package com.robinsplaza.smithery.datagen;
 
 import com.robinsplaza.smithery.block.ModBlocks;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import java.util.concurrent.CompletableFuture;
 
-public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
+public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
 
-    public static final TagKey<Block> MATTOCK_MINEABLE = TagKey.of(RegistryKeys.BLOCK, Identifier.of("c:mineable/mattock"));
-    public static final TagKey<Block> BEACON_BLOCKS = TagKey.of(RegistryKeys.BLOCK, Identifier.of("minecraft:beacon_base_blocks"));
+    public static final TagKey<Block> MATTOCK_MINEABLE = TagKey.create(Registries.BLOCK, Identifier.parse("c:mineable/mattock"));
+    public static final TagKey<Block> BEACON_BLOCKS = TagKey.create(Registries.BLOCK, Identifier.parse("minecraft:beacon_base_blocks"));
 
-    public ModBlockTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+    public ModBlockTagProvider(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup arg) {
+    protected void addTags(HolderLookup.Provider arg) {
 
-        getOrCreateTagBuilder(BEACON_BLOCKS)
+        valueLookupBuilder(BEACON_BLOCKS)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.ROSE_GOLD_BLOCK)
                 .add(ModBlocks.WYRMSTEEL_BLOCK);
 
-        getOrCreateTagBuilder(BlockTags.AXE_MINEABLE);
-        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE);
-        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE);
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE);
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_SHOVEL);
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_HOE);
 
-        getOrCreateTagBuilder(MATTOCK_MINEABLE)
-                .addTag(BlockTags.AXE_MINEABLE)
-                .addTag(BlockTags.SHOVEL_MINEABLE)
-                .addTag(BlockTags.HOE_MINEABLE);
+        valueLookupBuilder(MATTOCK_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .addTag(BlockTags.MINEABLE_WITH_HOE);
 
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.QUICKSILVER_ORE)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.ROSE_GOLD_BLOCK)
                 .add(ModBlocks.WYRMSTEEL_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
-                .add(ModBlocks.VOID_BLOCK)
                 .add(ModBlocks.IRON_GRATE)
                 .add(ModBlocks.ROSE_GOLD_GRATE)
                 .add(ModBlocks.ROSE_GOLD_BARS)
@@ -61,7 +59,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WYRMSTEEL_WALL)
                 .add(ModBlocks.WYRMSTEEL_CHAIN);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_BLOCK)
                 .add(ModBlocks.ROSE_GOLD_BLOCK)
                 .add(ModBlocks.WYRMSTEEL_BLOCK)
@@ -81,15 +79,14 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WYRMSTEEL_WALL)
                 .add(ModBlocks.WYRMSTEEL_CHAIN);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+        valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.QUICKSILVER_ORE);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.VOID_BLOCK)
+        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.IRON_GRATE);
 
 
-        getOrCreateTagBuilder(BlockTags.WALLS)
+        valueLookupBuilder(BlockTags.WALLS)
                 .add(ModBlocks.NETHERITE_WALL)
                 .add(ModBlocks.WYRMSTEEL_WALL);
 

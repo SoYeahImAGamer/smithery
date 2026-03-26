@@ -2,104 +2,102 @@ package com.robinsplaza.smithery.item;
 
 import com.robinsplaza.smithery.Smithery;
 import com.robinsplaza.smithery.block.ModBlocks;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 
 public class ModItemGroups {
-    public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP, Identifier.of(Smithery.MOD_ID, "smithery"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.smithery"))
-                    .icon(() -> new ItemStack(Items.SMITHING_TABLE)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.MULTITOOL_UPGRADE);
+    public static final CreativeModeTab RUBY_GROUP = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "smithery"),
+            FabricCreativeModeTab.builder().title(Component.translatable("itemgroup.smithery"))
+                    .icon(() -> new ItemStack(Items.SMITHING_TABLE)).displayItems((displayContext, entries) -> {
+                        entries.accept(ModItems.MULTITOOL_UPGRADE);
 
-                        entries.add(ModItems.RUBY);
-                        entries.add(ModBlocks.RUBY_BLOCK);
-                        entries.add(ModBlocks.NETHER_RUBY_ORE);
-                        entries.add(ModItems.QUICKSILVER);
-                        entries.add(ModBlocks.QUICKSILVER_ORE);
-                        entries.add(ModItems.WYRMSTEEL_INGOT);
-                        entries.add(ModBlocks.WYRMSTEEL_BLOCK);
-                        entries.add(ModItems.COPPER_NUGGET);
-                        entries.add(ModItems.ROSE_GOLD_INGOT);
-                        entries.add(ModItems.ROSE_GOLD_NUGGET);
-                        entries.add(ModBlocks.ROSE_GOLD_BLOCK);
+                        entries.accept(ModItems.RUBY);
+                        entries.accept(ModBlocks.RUBY_BLOCK);
+                        entries.accept(ModBlocks.NETHER_RUBY_ORE);
+                        entries.accept(ModItems.QUICKSILVER);
+                        entries.accept(ModBlocks.QUICKSILVER_ORE);
+                        entries.accept(ModItems.WYRMSTEEL_INGOT);
+                        entries.accept(ModBlocks.WYRMSTEEL_BLOCK);
+                        entries.accept(ModItems.ROSE_GOLD_INGOT);
+                        entries.accept(ModItems.ROSE_GOLD_NUGGET);
+                        entries.accept(ModBlocks.ROSE_GOLD_BLOCK);
 
-                        entries.add(ModItems.ROSE_GOLD_PICKAXE);
-                        entries.add(ModItems.ROSE_GOLD_AXE);
-                        entries.add(ModItems.ROSE_GOLD_MATTOCK);
-                        entries.add(ModItems.ROSE_GOLD_SHOVEL);
-                        entries.add(ModItems.ROSE_GOLD_HOE);
-                        entries.add(ModItems.ROSE_GOLD_SWORD);
+                        entries.accept(ModItems.ROSE_GOLD_PICKAXE);
+                        entries.accept(ModItems.ROSE_GOLD_AXE);
+                        entries.accept(ModItems.ROSE_GOLD_MATTOCK);
+                        entries.accept(ModItems.ROSE_GOLD_SHOVEL);
+                        entries.accept(ModItems.ROSE_GOLD_HOE);
+                        entries.accept(ModItems.ROSE_GOLD_SWORD);
 
-                        entries.add(ModItems.ROSE_GOLD_HELMET);
-                        entries.add(ModItems.ROSE_GOLD_CHESTPLATE);
-                        entries.add(ModItems.ROSE_GOLD_LEGGINGS);
-                        entries.add(ModItems.ROSE_GOLD_BOOTS);
+                        entries.accept(ModItems.ROSE_GOLD_HELMET);
+                        entries.accept(ModItems.ROSE_GOLD_CHESTPLATE);
+                        entries.accept(ModItems.ROSE_GOLD_LEGGINGS);
+                        entries.accept(ModItems.ROSE_GOLD_BOOTS);
 
-                        entries.add(ModItems.RUBY_PICKAXE);
-                        entries.add(ModItems.RUBY_HAMMER);
-                        entries.add(ModItems.RUBY_AXE);
-                        entries.add(ModItems.RUBY_MATTOCK);
-                        entries.add(ModItems.RUBY_SHOVEL);
-                        entries.add(ModItems.RUBY_HOE);
-                        entries.add(ModItems.RUBY_SWORD);
+                        entries.accept(ModItems.RUBY_PICKAXE);
+                        entries.accept(ModItems.RUBY_HAMMER);
+                        entries.accept(ModItems.RUBY_AXE);
+                        entries.accept(ModItems.RUBY_MATTOCK);
+                        entries.accept(ModItems.RUBY_SHOVEL);
+                        entries.accept(ModItems.RUBY_HOE);
+                        entries.accept(ModItems.RUBY_SWORD);
 
-                        entries.add(ModItems.RUBY_HELMET);
-                        entries.add(ModItems.RUBY_CHESTPLATE);
-                        entries.add(ModItems.RUBY_LEGGINGS);
-                        entries.add(ModItems.RUBY_BOOTS);
+                        entries.accept(ModItems.RUBY_HELMET);
+                        entries.accept(ModItems.RUBY_CHESTPLATE);
+                        entries.accept(ModItems.RUBY_LEGGINGS);
+                        entries.accept(ModItems.RUBY_BOOTS);
 
-                        entries.add(ModItems.WYRMSTEEL_UPGRADE);
+                        entries.accept(ModItems.WYRMSTEEL_UPGRADE);
 
-                        entries.add(ModItems.WYRMSTEEL_PICKAXE);
-                        entries.add(ModItems.WYRMSTEEL_HAMMER);
-                        entries.add(ModItems.WYRMSTEEL_AXE);
-                        entries.add(ModItems.WYRMSTEEL_MATTOCK);
-                        entries.add(ModItems.WYRMSTEEL_SHOVEL);
-                        entries.add(ModItems.WYRMSTEEL_HOE);
-                        entries.add(ModItems.WYRMSTEEL_SWORD);
+                        entries.accept(ModItems.WYRMSTEEL_PICKAXE);
+                        entries.accept(ModItems.WYRMSTEEL_HAMMER);
+                        entries.accept(ModItems.WYRMSTEEL_AXE);
+                        entries.accept(ModItems.WYRMSTEEL_MATTOCK);
+                        entries.accept(ModItems.WYRMSTEEL_SHOVEL);
+                        entries.accept(ModItems.WYRMSTEEL_HOE);
+                        entries.accept(ModItems.WYRMSTEEL_SWORD);
 
-                        entries.add(ModItems.WYRMSTEEL_HELMET);
-                        entries.add(ModItems.WYRMSTEEL_CHESTPLATE);
-                        entries.add(ModItems.WYRMSTEEL_LEGGINGS);
-                        entries.add(ModItems.WYRMSTEEL_BOOTS);
+                        entries.accept(ModItems.WYRMSTEEL_HELMET);
+                        entries.accept(ModItems.WYRMSTEEL_CHESTPLATE);
+                        entries.accept(ModItems.WYRMSTEEL_LEGGINGS);
+                        entries.accept(ModItems.WYRMSTEEL_BOOTS);
 
-                        entries.add(ModItems.DIAMOND_HAMMER);
-                        entries.add(ModItems.NETHERITE_HAMMER);
-                        entries.add(ModItems.DIAMOND_MATTOCK);
-                        entries.add(ModItems.NETHERITE_MATTOCK);
-                        entries.add(ModItems.IRON_MATTOCK);
-                        entries.add(ModItems.GOLDEN_MATTOCK);
+                        entries.accept(ModItems.DIAMOND_HAMMER);
+                        entries.accept(ModItems.NETHERITE_HAMMER);
+                        entries.accept(ModItems.DIAMOND_MATTOCK);
+                        entries.accept(ModItems.NETHERITE_MATTOCK);
+                        entries.accept(ModItems.IRON_MATTOCK);
+                        entries.accept(ModItems.GOLDEN_MATTOCK);
 
-                        entries.add(ModBlocks.VOID_BLOCK);
-                        entries.add(ModBlocks.IRON_GRATE);
-                        entries.add(ModBlocks.ROSE_GOLD_GRATE);
-                        entries.add(ModBlocks.ROSE_GOLD_BARS);
-                        entries.add(ModBlocks.ROSE_GOLD_CHAIN);
-                        entries.add(ModBlocks.GOLD_GRATE);
-                        entries.add(ModBlocks.GOLD_BARS);
-                        entries.add(ModBlocks.GOLD_CHAIN);
-                        entries.add(ModBlocks.NETHERITE_GRATE);
-                        entries.add(ModBlocks.NETHERITE_BARS);
-                        entries.add(ModBlocks.NETHERITE_WALL);
-                        entries.add(ModBlocks.NETHERITE_CHAIN);
-                        entries.add(ModBlocks.NETHERITE_STAIRS);
-                        entries.add(ModBlocks.NETHERITE_SLAB);
-                        entries.add(ModBlocks.WYRMSTEEL_GRATE);
-                        entries.add(ModBlocks.WYRMSTEEL_BARS);
-                        entries.add(ModBlocks.WYRMSTEEL_WALL);
-                        entries.add(ModBlocks.WYRMSTEEL_CHAIN);
-                        entries.add(ModBlocks.WYRMSTEEL_STAIRS);
-                        entries.add(ModBlocks.WYRMSTEEL_SLAB);
+                        entries.accept(ModBlocks.IRON_GRATE);
+                        entries.accept(ModBlocks.ROSE_GOLD_GRATE);
+                        entries.accept(ModBlocks.ROSE_GOLD_BARS);
+                        entries.accept(ModBlocks.ROSE_GOLD_CHAIN);
+                        entries.accept(ModBlocks.GOLD_GRATE);
+                        entries.accept(ModBlocks.GOLD_BARS);
+                        entries.accept(ModBlocks.GOLD_CHAIN);
+                        entries.accept(ModBlocks.NETHERITE_GRATE);
+                        entries.accept(ModBlocks.NETHERITE_BARS);
+                        entries.accept(ModBlocks.NETHERITE_WALL);
+                        entries.accept(ModBlocks.NETHERITE_CHAIN);
+                        entries.accept(ModBlocks.NETHERITE_STAIRS);
+                        entries.accept(ModBlocks.NETHERITE_SLAB);
+                        entries.accept(ModBlocks.WYRMSTEEL_GRATE);
+                        entries.accept(ModBlocks.WYRMSTEEL_BARS);
+                        entries.accept(ModBlocks.WYRMSTEEL_WALL);
+                        entries.accept(ModBlocks.WYRMSTEEL_CHAIN);
+                        entries.accept(ModBlocks.WYRMSTEEL_STAIRS);
+                        entries.accept(ModBlocks.WYRMSTEEL_SLAB);
 
-                        entries.add(ModItems.COPPER_SPUR);
-                        entries.add(ModItems.SILVER_SPUR);
-                        entries.add(ModItems.GOLDEN_SPUR);
+                        entries.accept(ModItems.COPPER_SPUR);
+                        entries.accept(ModItems.SILVER_SPUR);
+                        entries.accept(ModItems.GOLDEN_SPUR);
 
                     }).build());
 

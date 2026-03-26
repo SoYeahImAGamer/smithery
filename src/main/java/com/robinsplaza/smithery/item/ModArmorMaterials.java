@@ -1,53 +1,48 @@
 package com.robinsplaza.smithery.item;
 
 import com.robinsplaza.smithery.Smithery;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.ArmorMaterial;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.Identifier;
+import com.robinsplaza.smithery.datagen.ModItemTagProvider;
+import net.minecraft.core.Registry;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Util;
-
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.EquipmentAsset;
 import java.util.EnumMap;
-import java.util.List;
-import java.util.function.Supplier;
 
 public class ModArmorMaterials {
-    public static final RegistryEntry<ArmorMaterial> WYRMSTEEL_ARMOR_MATERIAL = registerArmorMaterial("wyrmsteel",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 3);
-                map.put(ArmorItem.Type.LEGGINGS, 5);
-                map.put(ArmorItem.Type.CHESTPLATE, 7);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 11);
-            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, () -> Ingredient.ofItems(ModItems.WYRMSTEEL_INGOT),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(Smithery.MOD_ID, "wyrmsteel"))), 0, 0));
+    //old (<1.21.3)
+    //public static EquipmentModel WYRMSTEEL = EquipmentModel.builder().addHumanoidLayers(Identifier.of(Smithery.MOD_ID, "wyrmsteel")).build();
 
-    public static final RegistryEntry<ArmorMaterial> ROSE_GOLD_ARMOR_MATERIAL = registerArmorMaterial("rose_gold",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 1);
-                map.put(ArmorItem.Type.LEGGINGS, 4);
-                map.put(ArmorItem.Type.CHESTPLATE, 5);
-                map.put(ArmorItem.Type.HELMET, 2);
-                map.put(ArmorItem.Type.BODY, 7);
-            }), 22, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, () -> Ingredient.ofItems(ModItems.ROSE_GOLD_INGOT),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(Smithery.MOD_ID, "rose_gold"))), 0, 0));
+    //new (>1.21.4)
+    static ResourceKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
+    public static final ResourceKey<EquipmentAsset> WYRMSTEEL_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "wyrmsteel"));
+    public static final ResourceKey<EquipmentAsset> ROSE_GOLD_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "rose_gold"));
+    public static final ResourceKey<EquipmentAsset> RUBY_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "ruby"));
 
-    public static final RegistryEntry<ArmorMaterial> RUBY_ARMOR_MATERIAL = registerArmorMaterial("ruby",
-            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.BOOTS, 3);
-                map.put(ArmorItem.Type.LEGGINGS, 6);
-                map.put(ArmorItem.Type.CHESTPLATE, 8);
-                map.put(ArmorItem.Type.HELMET, 3);
-                map.put(ArmorItem.Type.BODY, 11);
-            }), 10, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.RUBY),
-                    List.of(new ArmorMaterial.Layer(Identifier.of(Smithery.MOD_ID, "ruby"))), 2.0f, 0));
+    public static final ArmorMaterial WYRMSTEEL_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+        map.put(ArmorType.BOOTS, 3);
+        map.put(ArmorType.LEGGINGS, 5);
+        map.put(ArmorType.CHESTPLATE, 7);
+        map.put(ArmorType.HELMET, 3);
+        map.put(ArmorType.BODY, 11);
+    }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 0, 0, ModItemTagProvider.WYRMSTEEL_REPAIR_MATERIALS, WYRMSTEEL_KEY);
 
+    public static final ArmorMaterial ROSE_GOLD_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+        map.put(ArmorType.BOOTS, 1);
+        map.put(ArmorType.LEGGINGS, 4);
+        map.put(ArmorType.CHESTPLATE, 5);
+        map.put(ArmorType.HELMET, 2);
+        map.put(ArmorType.BODY, 7);
+    }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 0, 0, ModItemTagProvider.ROSE_GOLD_REPAIR_MATERIALS, ROSE_GOLD_KEY);
 
-    public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material){
-        return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(Smithery.MOD_ID, name), material.get());
-    }
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+        map.put(ArmorType.BOOTS, 3);
+        map.put(ArmorType.LEGGINGS, 6);
+        map.put(ArmorType.CHESTPLATE, 8);
+        map.put(ArmorType.HELMET, 3);
+        map.put(ArmorType.BODY, 11);
+    }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 0, 0, ModItemTagProvider.RUBY_REPAIR_MATERIALS, RUBY_KEY);
 }

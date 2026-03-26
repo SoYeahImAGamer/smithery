@@ -1,103 +1,246 @@
 package com.robinsplaza.smithery.block;
 
 import com.robinsplaza.smithery.Smithery;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.*;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ChainBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.IronBarsBlock;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.WaterloggedTransparentBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.MapColor;
+import java.util.function.Function;
 
 public class ModBlocks {
 
     //ore blocks
     public static final Block RUBY_BLOCK = registerBlock("ruby_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.DIAMOND_BLOCK).sounds(BlockSoundGroup.AMETHYST_BLOCK)));
+            properties -> new Block(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_RED)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.AMETHYST)));
     public static final Block NETHER_RUBY_ORE = registerBlock("nether_ruby_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
+            properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.NETHER)
+                    .strength(3.0f, 3.0f)
+                    .sound(SoundType.NETHERRACK)));
     public static final Block QUICKSILVER_ORE = registerBlock("quicksilver_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2, 8), AbstractBlock.Settings.copy(Blocks.DIAMOND_ORE)));
+            properties -> new DropExperienceBlock(UniformInt.of(2, 8), properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.SAND)
+                    .strength(3.0f, 9.0f)
+                    .sound(SoundType.STONE)));
     public static final Block WYRMSTEEL_BLOCK = registerBlock("wyrmsteel_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
+            properties -> new Block(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
     public static final Block ROSE_GOLD_BLOCK = registerBlock("rose_gold_block",
-            new Block(AbstractBlock.Settings.copy(Blocks.GOLD_BLOCK)));
+            properties -> new Block(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
 
     //deco blocks
-    public static final Block VOID_BLOCK = registerBlock("void_block",
-            new VoidBlock(AbstractBlock.Settings.create().nonOpaque().hardness(0.5f).luminance(state -> 15)));
-    public static final Block VOID_BLOCK_ITEM = registerBlock("void_block_item",
-            new Block(AbstractBlock.Settings.create().nonOpaque().hardness(0.5f).luminance(state -> 15)));
-
     public static final Block IRON_GRATE = registerBlock("iron_grate",
-            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.LIGHT_GRAY)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WaterloggedTransparentBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
 
     public static final Block ROSE_GOLD_GRATE = registerBlock("rose_gold_grate",
-            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.PINK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WaterloggedTransparentBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(3.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block ROSE_GOLD_BARS = registerBlock("rose_gold_bars",
-            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).nonOpaque().mapColor(MapColor.PINK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new IronBarsBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block ROSE_GOLD_CHAIN = registerBlock("rose_gold_chain",
-            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.PINK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new ChainBlock(properties
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.CHAIN)));
 
     public static final Block GOLD_GRATE = registerBlock("gold_grate",
-            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.GOLD)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WaterloggedTransparentBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.GOLD)
+                    .strength(3.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block GOLD_BARS = registerBlock("gold_bars",
-            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).nonOpaque().mapColor(MapColor.GOLD)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new IronBarsBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block GOLD_CHAIN = registerBlock("gold_chain",
-            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.GOLD)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new ChainBlock(properties
+                    .noOcclusion()
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.CHAIN)));
 
     public static final Block NETHERITE_GRATE = registerBlock("netherite_grate",
-            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.BLACK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WaterloggedTransparentBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(3.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.NETHERITE_BLOCK)));
     public static final Block NETHERITE_BARS = registerBlock("netherite_bars",
-            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).nonOpaque().mapColor(MapColor.BLACK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new IronBarsBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.NETHERITE_BLOCK)));
     public static final Block NETHERITE_WALL = registerBlock("netherite_wall",
-            new WallBlock(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK).mapColor(MapColor.BLACK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(33.0f, 1200.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.NETHERITE_BLOCK)));
     public static final Block NETHERITE_CHAIN = registerBlock("netherite_chain",
-            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.BLACK)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new ChainBlock(properties
+                    .noOcclusion()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.CHAIN)));
     public static final Block NETHERITE_STAIRS = registerBlock("netherite_stairs",
-            new StairsBlock(Blocks.NETHERITE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK)));
+            properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), properties
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(33.0f, 1200.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
     public static final Block NETHERITE_SLAB = registerBlock("netherite_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(Blocks.NETHERITE_BLOCK)));
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(33.0f, 1200.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
 
     public static final Block WYRMSTEEL_GRATE = registerBlock("wyrmsteel_grate",
-            new GrateBlock(AbstractBlock.Settings.copy(Blocks.COPPER_GRATE).nonOpaque().mapColor(MapColor.MAGENTA)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WaterloggedTransparentBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.ICE)
+                    .strength(3.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)));
     public static final Block WYRMSTEEL_BARS = registerBlock("wyrmsteel_bars",
-            new PaneBlock(AbstractBlock.Settings.copy(Blocks.IRON_BARS).nonOpaque().mapColor(MapColor.MAGENTA)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new IronBarsBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .noOcclusion()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block WYRMSTEEL_WALL = registerBlock("wyrmsteel_wall",
-            new WallBlock(AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK).mapColor(MapColor.MAGENTA)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block WYRMSTEEL_CHAIN = registerBlock("wyrmsteel_chain",
-            new ChainBlock(AbstractBlock.Settings.copy(Blocks.CHAIN).nonOpaque().mapColor(MapColor.MAGENTA)
-                    .solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+            properties -> new ChainBlock(properties
+                    .noOcclusion()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.CHAIN)));
     public static final Block WYRMSTEEL_STAIRS = registerBlock("wyrmsteel_stairs",
-            new StairsBlock(WYRMSTEEL_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK)));
+            properties -> new StairBlock(WYRMSTEEL_BLOCK.defaultBlockState(), properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
     public static final Block WYRMSTEEL_SLAB = registerBlock("wyrmsteel_slab",
-            new SlabBlock(AbstractBlock.Settings.copy(WYRMSTEEL_BLOCK)));
+            properties -> new SlabBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
 
 
-    private static Block registerBlock(String name, Block block){
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(Smithery.MOD_ID, name), block);
+    private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function){
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, name))));
+        registerBlockItem(name, toRegister);
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, name), toRegister);
     }
 
-    private static Item registerBlockItem(String name, Block block){
-        return Registry.register(Registries.ITEM, Identifier.of(Smithery.MOD_ID, name),
-                new BlockItem(block, new Item.Settings()));
+    private static void registerBlockItem(String name, Block block){
+        Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, name),
+                new BlockItem(block, new Item.Properties().useBlockDescriptionPrefix()
+                        .setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, name)))));
     }
     public static void registerModBlocks(){
         Smithery.LOGGER.info("Registering blocks for " + Smithery.MOD_ID);

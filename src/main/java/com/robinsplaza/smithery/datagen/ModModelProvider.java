@@ -1,158 +1,117 @@
 package com.robinsplaza.smithery.datagen;
 
 import com.robinsplaza.smithery.block.ModBlocks;
+import com.robinsplaza.smithery.item.ModArmorMaterials;
 import com.robinsplaza.smithery.item.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.data.client.*;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.state.property.Properties;
-import net.minecraft.util.Identifier;
-
-import java.util.function.Consumer;
+import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
+import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
+import net.minecraft.client.data.models.BlockModelGenerators;
+import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.world.level.block.Blocks;
 
 public class ModModelProvider extends FabricModelProvider {
-    public ModModelProvider(FabricDataOutput output) {
+    public ModModelProvider(FabricPackOutput output) {
         super(output);
     }
 
     @Override
-    public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        BlockStateModelGenerator.BlockTexturePool netheritePool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.NETHERITE_BLOCK);
-        BlockStateModelGenerator.BlockTexturePool wyrmsteelPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.WYRMSTEEL_BLOCK);
+    public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
+        BlockModelGenerators.BlockFamilyProvider netheritePool = blockStateModelGenerator.family(Blocks.NETHERITE_BLOCK);
+        BlockModelGenerators.BlockFamilyProvider wyrmsteelPool = blockStateModelGenerator.family(ModBlocks.WYRMSTEEL_BLOCK);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROSE_GOLD_BLOCK);
-        //blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WYRMSTEEL_BLOCK);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHER_RUBY_ORE);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.QUICKSILVER_ORE);
+        blockStateModelGenerator.createTrivialCube(ModBlocks.RUBY_BLOCK);
+        blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_BLOCK);
+        blockStateModelGenerator.createTrivialCube(ModBlocks.NETHER_RUBY_ORE);
+        blockStateModelGenerator.createTrivialCube(ModBlocks.QUICKSILVER_ORE);
 
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_BLOCK_ITEM);
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.IRON_GRATE);
+        blockStateModelGenerator.createTrivialCube(ModBlocks.IRON_GRATE);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.ROSE_GOLD_GRATE);
-        this.registerGenericBars(blockStateModelGenerator, ModBlocks.ROSE_GOLD_BARS);
-        blockStateModelGenerator.registerAxisRotated(ModBlocks.ROSE_GOLD_CHAIN, ModelIds.getBlockModelId(ModBlocks.ROSE_GOLD_CHAIN));
-        blockStateModelGenerator.registerItemModel(ModBlocks.ROSE_GOLD_CHAIN.asItem());
+        blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_GRATE);
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.ROSE_GOLD_CHAIN.asItem());
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.ROSE_GOLD_BARS.asItem());
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GOLD_GRATE);
-        this.registerGenericBars(blockStateModelGenerator, ModBlocks.GOLD_BARS);
-        blockStateModelGenerator.registerAxisRotated(ModBlocks.GOLD_CHAIN, ModelIds.getBlockModelId(ModBlocks.GOLD_CHAIN));
-        blockStateModelGenerator.registerItemModel(ModBlocks.GOLD_CHAIN.asItem());
+        blockStateModelGenerator.createTrivialCube(ModBlocks.GOLD_GRATE);
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.GOLD_CHAIN.asItem());
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.GOLD_BARS.asItem());
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NETHERITE_GRATE);
-        this.registerGenericBars(blockStateModelGenerator, ModBlocks.NETHERITE_BARS);
-        blockStateModelGenerator.registerAxisRotated(ModBlocks.NETHERITE_CHAIN, ModelIds.getBlockModelId(ModBlocks.NETHERITE_CHAIN));
-        blockStateModelGenerator.registerItemModel(ModBlocks.NETHERITE_CHAIN.asItem());
+        blockStateModelGenerator.createTrivialCube(ModBlocks.NETHERITE_GRATE);
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.NETHERITE_CHAIN.asItem());
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.NETHERITE_BARS.asItem());
         netheritePool.wall(ModBlocks.NETHERITE_WALL);
         netheritePool.stairs(ModBlocks.NETHERITE_STAIRS);
         netheritePool.slab(ModBlocks.NETHERITE_SLAB);
 
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.WYRMSTEEL_GRATE);
-        this.registerGenericBars(blockStateModelGenerator, ModBlocks.WYRMSTEEL_BARS);
-        blockStateModelGenerator.registerAxisRotated(ModBlocks.WYRMSTEEL_CHAIN, ModelIds.getBlockModelId(ModBlocks.WYRMSTEEL_CHAIN));
-        blockStateModelGenerator.registerItemModel(ModBlocks.WYRMSTEEL_CHAIN.asItem());
+        blockStateModelGenerator.createTrivialCube(ModBlocks.WYRMSTEEL_GRATE);
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.WYRMSTEEL_CHAIN.asItem());
+        blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.WYRMSTEEL_BARS.asItem());
         wyrmsteelPool.wall(ModBlocks.WYRMSTEEL_WALL);
         wyrmsteelPool.stairs(ModBlocks.WYRMSTEEL_STAIRS);
         wyrmsteelPool.slab(ModBlocks.WYRMSTEEL_SLAB);
 
     }
 
-    public void registerGenericBars(BlockStateModelGenerator blockStateModelGenerator, Block block) {
-        Identifier identifier = ModelIds.getBlockSubModelId(block, "_post_ends");
-        Identifier identifier2 = ModelIds.getBlockSubModelId(block, "_post");
-        Identifier identifier3 = ModelIds.getBlockSubModelId(block, "_cap");
-        Identifier identifier4 = ModelIds.getBlockSubModelId(block, "_cap_alt");
-        Identifier identifier5 = ModelIds.getBlockSubModelId(block, "_side");
-        Identifier identifier6 = ModelIds.getBlockSubModelId(block, "_side_alt");
-        blockStateModelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(block)
-                .with(BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
-                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier2))
-                .with(When.create().set(Properties.NORTH, true).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, false),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier3))
-                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, true).set(Properties.SOUTH, false).set(Properties.WEST, false),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier3).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, true).set(Properties.WEST, false),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier4))
-                .with(When.create().set(Properties.NORTH, false).set(Properties.EAST, false).set(Properties.SOUTH, false).set(Properties.WEST, true),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier4).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier5))
-                .with(When.create().set(Properties.EAST, true),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier5).put(VariantSettings.Y, VariantSettings.Rotation.R90))
-                .with(When.create().set(Properties.SOUTH, true),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier6))
-                .with(When.create().set(Properties.WEST, true),
-                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier6).put(VariantSettings.Y, VariantSettings.Rotation.R90)));
-        blockStateModelGenerator.registerItemModel(block);
-    }
-
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+    public void generateItemModels(ItemModelGenerators itemModelGenerator) {
 
-        itemModelGenerator.register(ModItems.COPPER_SPUR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.SILVER_SPUR, Models.GENERATED);
-        itemModelGenerator.register(ModItems.GOLDEN_SPUR, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(ModItems.COPPER_SPUR, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.SILVER_SPUR, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GOLDEN_SPUR, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.QUICKSILVER, Models.GENERATED);
-        itemModelGenerator.register(ModItems.COPPER_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_NUGGET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_UPGRADE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MULTITOOL_UPGRADE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ETERNAL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.QUICKSILVER, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.COPPER_NUGGET, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_NUGGET, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_INGOT, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_UPGRADE, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.MULTITOOL_UPGRADE, ModelTemplates.FLAT_ITEM);
 
-        itemModelGenerator.register(ModItems.WYRMSTEEL_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_HAMMER, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.WYRMSTEEL_SWORD, Models.HANDHELD);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerator.register(ModItems.RUBY_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_HAMMER, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.RUBY_SWORD, Models.HANDHELD);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerator.register(ModItems.ROSE_GOLD_PICKAXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_AXE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_SHOVEL, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_HOE, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.ROSE_GOLD_SWORD, Models.HANDHELD);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerator.register(ModItems.MAGIC_MIRROR, Models.HANDHELD);
+        itemModelGenerator.generateFlatItem(ModItems.DIAMOND_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.NETHERITE_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.DIAMOND_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.NETHERITE_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.GOLDEN_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateFlatItem(ModItems.IRON_MATTOCK, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-        itemModelGenerator.register(ModItems.DIAMOND_HAMMER, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.NETHERITE_HAMMER, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.DIAMOND_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.NETHERITE_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.GOLDEN_MATTOCK, Models.HANDHELD);
-        itemModelGenerator.register(ModItems.IRON_MATTOCK, Models.HANDHELD);
-        
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.WYRMSTEEL_BOOTS));
+        itemModelGenerator.generateTrimmableItem(ModItems.WYRMSTEEL_HELMET, ModArmorMaterials.WYRMSTEEL_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.WYRMSTEEL_CHESTPLATE, ModArmorMaterials.WYRMSTEEL_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.WYRMSTEEL_LEGGINGS, ModArmorMaterials.WYRMSTEEL_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.WYRMSTEEL_BOOTS, ModArmorMaterials.WYRMSTEEL_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.RUBY_BOOTS));
+        itemModelGenerator.generateTrimmableItem(ModItems.RUBY_HELMET, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.RUBY_CHESTPLATE, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.RUBY_LEGGINGS, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.RUBY_BOOTS, ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSE_GOLD_HELMET));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSE_GOLD_CHESTPLATE));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSE_GOLD_LEGGINGS));
-        itemModelGenerator.registerArmor(((ArmorItem) ModItems.ROSE_GOLD_BOOTS));
+        itemModelGenerator.generateTrimmableItem(ModItems.ROSE_GOLD_HELMET, ModArmorMaterials.ROSE_GOLD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.ROSE_GOLD_CHESTPLATE, ModArmorMaterials.ROSE_GOLD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.ROSE_GOLD_LEGGINGS, ModArmorMaterials.ROSE_GOLD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModelGenerator.generateTrimmableItem(ModItems.ROSE_GOLD_BOOTS, ModArmorMaterials.ROSE_GOLD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
     }
 }
