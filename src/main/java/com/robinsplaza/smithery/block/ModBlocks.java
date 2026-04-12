@@ -58,6 +58,7 @@ public class ModBlocks {
                     .sound(SoundType.METAL)));
 
     //deco blocks
+        //iron
     public static final Block IRON_GRATE = registerBlock("iron_grate",
             properties -> new WaterloggedTransparentBlock(properties
                     .requiresCorrectToolForDrops()
@@ -68,7 +69,32 @@ public class ModBlocks {
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.METAL)));
+    public static final Block CUT_IRON = registerBlock("cut_iron",
+            properties -> new Block(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_IRON_WALL = registerBlock("cut_iron_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_IRON_STAIRS = registerBlock("cut_iron_stairs",
+            properties -> new StairBlock(CUT_IRON.defaultBlockState(), properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_IRON_SLAB = registerBlock("cut_iron_slab",
+            properties -> new SlabBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .strength(3.0f, 6.0f)
+                    .sound(SoundType.METAL)));
 
+        //rose gold
     public static final Block ROSE_GOLD_GRATE = registerBlock("rose_gold_grate",
             properties -> new WaterloggedTransparentBlock(properties
                     .requiresCorrectToolForDrops()
@@ -99,6 +125,7 @@ public class ModBlocks {
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.CHAIN)));
 
+        //gold
     public static final Block GOLD_GRATE = registerBlock("gold_grate",
             properties -> new WaterloggedTransparentBlock(properties
                     .requiresCorrectToolForDrops()
@@ -129,6 +156,7 @@ public class ModBlocks {
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.CHAIN)));
 
+        //netherite
     public static final Block NETHERITE_GRATE = registerBlock("netherite_grate",
             properties -> new WaterloggedTransparentBlock(properties
                     .requiresCorrectToolForDrops()
@@ -148,6 +176,33 @@ public class ModBlocks {
                     .isRedstoneConductor(Blocks::never)
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
+                    .sound(SoundType.NETHERITE_BLOCK)));
+    public static final Block CUT_NETHERITE = registerBlock("cut_netherite",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(20.0f, 600.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
+    public static final Block CUT_NETHERITE_WALL = registerBlock("cut_netherite_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(20.0f, 600.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.NETHERITE_BLOCK)));
+    public static final Block CUT_NETHERITE_STAIRS = registerBlock("cut_netherite_stairs",
+            properties -> new StairBlock(Blocks.NETHERITE_BLOCK.defaultBlockState(), properties
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(20.0f, 600.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.NETHERITE_BLOCK)));
+    public static final Block CUT_NETHERITE_SLAB = registerBlock("cut_netherite_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(20.0f, 600.0f)
+                    .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHERITE_BLOCK)));
     public static final Block NETHERITE_WALL = registerBlock("netherite_wall",
             properties -> new WallBlock(properties
@@ -180,6 +235,7 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.NETHERITE_BLOCK)));
 
+        //wyrmsteel
     public static final Block WYRMSTEEL_GRATE = registerBlock("wyrmsteel_grate",
             properties -> new WaterloggedTransparentBlock(properties
                     .requiresCorrectToolForDrops()
@@ -199,15 +255,6 @@ public class ModBlocks {
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.METAL)));
-    public static final Block WYRMSTEEL_WALL = registerBlock("wyrmsteel_wall",
-            properties -> new WallBlock(properties
-                    .requiresCorrectToolForDrops()
-                    .mapColor(MapColor.ICE)
-                    .strength(5.0f, 6.0f)
-                    .isRedstoneConductor(Blocks::never)
-                    .isSuffocating(Blocks::never)
-                    .isViewBlocking(Blocks::never)
-                    .sound(SoundType.METAL)));
     public static final Block WYRMSTEEL_CHAIN = registerBlock("wyrmsteel_chain",
             properties -> new ChainBlock(properties
                     .noOcclusion()
@@ -217,6 +264,42 @@ public class ModBlocks {
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.CHAIN)));
+    public static final Block CUT_WYRMSTEEL = registerBlock("cut_wyrmsteel",
+            properties -> new Block(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_WYRMSTEEL_WALL = registerBlock("cut_wyrmsteel_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_WYRMSTEEL_STAIRS = registerBlock("cut_wyrmsteel_stairs",
+            properties -> new StairBlock(WYRMSTEEL_BLOCK.defaultBlockState(), properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_WYRMSTEEL_SLAB = registerBlock("cut_wyrmsteel_slab",
+            properties -> new SlabBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .sound(SoundType.METAL)));
+    public static final Block WYRMSTEEL_WALL = registerBlock("wyrmsteel_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.ICE)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
     public static final Block WYRMSTEEL_STAIRS = registerBlock("wyrmsteel_stairs",
             properties -> new StairBlock(WYRMSTEEL_BLOCK.defaultBlockState(), properties
                     .requiresCorrectToolForDrops()

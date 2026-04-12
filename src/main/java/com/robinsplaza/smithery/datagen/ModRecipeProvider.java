@@ -18,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.block.Blocks;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -98,6 +99,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.IRON_TRAPDOOR, Blocks.IRON_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.IRON_DOOR, Blocks.IRON_BLOCK, 4);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.IRON_CHAIN, Blocks.IRON_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON, Blocks.IRON_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_STAIRS, Blocks.IRON_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_WALL, Blocks.IRON_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_SLAB, Blocks.IRON_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_STAIRS, ModBlocks.CUT_IRON, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_WALL, ModBlocks.CUT_IRON, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_SLAB, ModBlocks.CUT_IRON, 2);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_SLAB, ModBlocks.CUT_IRON);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_WALL, ModBlocks.CUT_IRON);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_IRON_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModBlocks.CUT_IRON)
+                        .unlockedBy(getHasName(ModBlocks.CUT_IRON), has(ModBlocks.CUT_IRON))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("cut_iron_stairs")));
 
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_GRATE, ModBlocks.ROSE_GOLD_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_BARS, ModBlocks.ROSE_GOLD_BLOCK, 24);
@@ -109,17 +127,46 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_GRATE, Blocks.NETHERITE_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_BARS, Blocks.NETHERITE_BLOCK, 24);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 4);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_CHAIN, Blocks.NETHERITE_BLOCK, 8);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_STAIRS, Blocks.NETHERITE_BLOCK, 4);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_SLAB, Blocks.NETHERITE_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE, Blocks.NETHERITE_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_WALL, Blocks.NETHERITE_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_STAIRS, Blocks.NETHERITE_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_SLAB, Blocks.NETHERITE_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_STAIRS, ModBlocks.CUT_NETHERITE, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_WALL, ModBlocks.CUT_NETHERITE, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_SLAB, ModBlocks.CUT_NETHERITE, 2);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_SLAB, ModBlocks.CUT_NETHERITE);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_WALL, ModBlocks.CUT_NETHERITE);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_NETHERITE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModBlocks.CUT_NETHERITE)
+                        .unlockedBy(getHasName(ModBlocks.CUT_NETHERITE), has(ModBlocks.CUT_NETHERITE))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("cut_netherite_stairs")));
 
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_GRATE, ModBlocks.WYRMSTEEL_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_BARS, ModBlocks.WYRMSTEEL_BLOCK, 24);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_WALL, ModBlocks.WYRMSTEEL_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL, ModBlocks.WYRMSTEEL_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_WALL, ModBlocks.WYRMSTEEL_BLOCK, 4);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_CHAIN, ModBlocks.WYRMSTEEL_BLOCK, 8);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_STAIRS, ModBlocks.WYRMSTEEL_BLOCK, 4);
-                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WYRMSTEEL_SLAB, ModBlocks.WYRMSTEEL_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_STAIRS, ModBlocks.WYRMSTEEL_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_SLAB, ModBlocks.WYRMSTEEL_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_STAIRS, ModBlocks.CUT_WYRMSTEEL, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_WALL, ModBlocks.CUT_WYRMSTEEL, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_SLAB, ModBlocks.CUT_WYRMSTEEL, 2);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_SLAB, ModBlocks.CUT_WYRMSTEEL);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_WALL, ModBlocks.CUT_WYRMSTEEL);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_WYRMSTEEL_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModBlocks.CUT_WYRMSTEEL)
+                        .unlockedBy(getHasName(ModBlocks.CUT_WYRMSTEEL), has(ModBlocks.CUT_WYRMSTEEL))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("cut_wyrmsteel_stairs")));
+
 
                 //alloys
                 shapeless(RecipeCategory.MISC, ModItems.WYRMSTEEL_INGOT, 1)

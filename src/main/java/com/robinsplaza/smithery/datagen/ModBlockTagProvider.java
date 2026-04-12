@@ -44,6 +44,10 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.WYRMSTEEL_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
                 .add(ModBlocks.IRON_GRATE)
+                .add(ModBlocks.CUT_IRON)
+                .add(ModBlocks.CUT_IRON_WALL)
+                .add(ModBlocks.CUT_IRON_STAIRS)
+                .add(ModBlocks.CUT_IRON_SLAB)
                 .add(ModBlocks.ROSE_GOLD_GRATE)
                 .add(ModBlocks.ROSE_GOLD_BARS)
                 .add(ModBlocks.ROSE_GOLD_CHAIN)
@@ -53,10 +57,19 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.NETHERITE_GRATE)
                 .add(ModBlocks.NETHERITE_BARS)
                 .add(ModBlocks.NETHERITE_WALL)
+                .add(ModBlocks.NETHERITE_STAIRS)
+                .add(ModBlocks.NETHERITE_SLAB)
+                .add(ModBlocks.CUT_NETHERITE)
+                .add(ModBlocks.CUT_NETHERITE_WALL)
+                .add(ModBlocks.CUT_NETHERITE_STAIRS)
+                .add(ModBlocks.CUT_NETHERITE_SLAB)
                 .add(ModBlocks.NETHERITE_CHAIN)
                 .add(ModBlocks.WYRMSTEEL_GRATE)
                 .add(ModBlocks.WYRMSTEEL_BARS)
+                .add(ModBlocks.CUT_WYRMSTEEL)
                 .add(ModBlocks.WYRMSTEEL_WALL)
+                .add(ModBlocks.WYRMSTEEL_STAIRS)
+                .add(ModBlocks.WYRMSTEEL_SLAB)
                 .add(ModBlocks.WYRMSTEEL_CHAIN);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
@@ -64,31 +77,48 @@ public class ModBlockTagProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.ROSE_GOLD_BLOCK)
                 .add(ModBlocks.WYRMSTEEL_BLOCK)
                 .add(ModBlocks.NETHER_RUBY_ORE)
-                .add(ModBlocks.ROSE_GOLD_GRATE)
-                .add(ModBlocks.ROSE_GOLD_BARS)
-                .add(ModBlocks.ROSE_GOLD_CHAIN)
-                .add(ModBlocks.GOLD_GRATE)
-                .add(ModBlocks.GOLD_BARS)
-                .add(ModBlocks.GOLD_CHAIN)
                 .add(ModBlocks.NETHERITE_GRATE)
                 .add(ModBlocks.NETHERITE_BARS)
                 .add(ModBlocks.NETHERITE_WALL)
                 .add(ModBlocks.NETHERITE_CHAIN)
+                .add(ModBlocks.CUT_NETHERITE)
+                .add(ModBlocks.CUT_NETHERITE_WALL)
+                .add(ModBlocks.CUT_NETHERITE_STAIRS)
+                .add(ModBlocks.CUT_NETHERITE_SLAB)
                 .add(ModBlocks.WYRMSTEEL_GRATE)
                 .add(ModBlocks.WYRMSTEEL_BARS)
+                .add(ModBlocks.CUT_WYRMSTEEL)
+                .add(ModBlocks.CUT_WYRMSTEEL_WALL)
+                .add(ModBlocks.CUT_WYRMSTEEL_STAIRS)
+                .add(ModBlocks.CUT_WYRMSTEEL_SLAB)
                 .add(ModBlocks.WYRMSTEEL_WALL)
+                .add(ModBlocks.WYRMSTEEL_STAIRS)
+                .add(ModBlocks.WYRMSTEEL_SLAB)
                 .add(ModBlocks.WYRMSTEEL_CHAIN);
 
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.QUICKSILVER_ORE);
 
-        valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.IRON_GRATE);
-
-
         valueLookupBuilder(BlockTags.WALLS)
+                .add(ModBlocks.CUT_IRON_WALL)
                 .add(ModBlocks.NETHERITE_WALL)
-                .add(ModBlocks.WYRMSTEEL_WALL);
+                .add(ModBlocks.CUT_NETHERITE_WALL)
+                .add(ModBlocks.WYRMSTEEL_WALL)
+                .add(ModBlocks.CUT_WYRMSTEEL_WALL);
+
+        valueLookupBuilder(BlockTags.STAIRS)
+                .add(ModBlocks.CUT_IRON_STAIRS)
+                .add(ModBlocks.NETHERITE_STAIRS)
+                .add(ModBlocks.CUT_NETHERITE_STAIRS)
+                .add(ModBlocks.WYRMSTEEL_STAIRS)
+                .add(ModBlocks.CUT_WYRMSTEEL_STAIRS);
+
+        valueLookupBuilder(BlockTags.SLABS)
+                .add(ModBlocks.CUT_IRON_SLAB)
+                .add(ModBlocks.NETHERITE_SLAB)
+                .add(ModBlocks.CUT_NETHERITE_SLAB)
+                .add(ModBlocks.WYRMSTEEL_SLAB)
+                .add(ModBlocks.CUT_WYRMSTEEL_SLAB);
 
     }
 }

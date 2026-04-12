@@ -19,6 +19,9 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockModelGenerators blockStateModelGenerator) {
         BlockModelGenerators.BlockFamilyProvider netheritePool = blockStateModelGenerator.family(Blocks.NETHERITE_BLOCK);
         BlockModelGenerators.BlockFamilyProvider wyrmsteelPool = blockStateModelGenerator.family(ModBlocks.WYRMSTEEL_BLOCK);
+        BlockModelGenerators.BlockFamilyProvider cutIronPool = blockStateModelGenerator.family(ModBlocks.CUT_IRON);
+        BlockModelGenerators.BlockFamilyProvider cutNetheritePool = blockStateModelGenerator.family(ModBlocks.CUT_NETHERITE);
+        BlockModelGenerators.BlockFamilyProvider cutWyrmsteelPool = blockStateModelGenerator.family(ModBlocks.CUT_WYRMSTEEL);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.RUBY_BLOCK);
         blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_BLOCK);
@@ -27,6 +30,9 @@ public class ModModelProvider extends FabricModelProvider {
 
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.IRON_GRATE);
+        cutIronPool.wall(ModBlocks.CUT_IRON_WALL);
+        cutIronPool.stairs(ModBlocks.CUT_IRON_STAIRS);
+        cutIronPool.slab(ModBlocks.CUT_IRON_SLAB);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_GRATE);
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.ROSE_GOLD_CHAIN.asItem());
@@ -42,6 +48,9 @@ public class ModModelProvider extends FabricModelProvider {
         netheritePool.wall(ModBlocks.NETHERITE_WALL);
         netheritePool.stairs(ModBlocks.NETHERITE_STAIRS);
         netheritePool.slab(ModBlocks.NETHERITE_SLAB);
+        cutNetheritePool.wall(ModBlocks.CUT_NETHERITE_WALL);
+        cutNetheritePool.stairs(ModBlocks.CUT_NETHERITE_STAIRS);
+        cutNetheritePool.slab(ModBlocks.CUT_NETHERITE_SLAB);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.WYRMSTEEL_GRATE);
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.WYRMSTEEL_CHAIN.asItem());
@@ -49,6 +58,9 @@ public class ModModelProvider extends FabricModelProvider {
         wyrmsteelPool.wall(ModBlocks.WYRMSTEEL_WALL);
         wyrmsteelPool.stairs(ModBlocks.WYRMSTEEL_STAIRS);
         wyrmsteelPool.slab(ModBlocks.WYRMSTEEL_SLAB);
+        cutWyrmsteelPool.wall(ModBlocks.CUT_WYRMSTEEL_WALL);
+        cutWyrmsteelPool.stairs(ModBlocks.CUT_WYRMSTEEL_STAIRS);
+        cutWyrmsteelPool.slab(ModBlocks.CUT_WYRMSTEEL_SLAB);
 
     }
 

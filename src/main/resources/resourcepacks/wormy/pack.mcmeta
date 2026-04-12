@@ -1,8 +1,9 @@
 {
   "pack": {
-    "pack_format": 48,
     "description": {
       "translate": "resourcePack.smithery.wormy.description"
-    }
+    },
+    "min_format": 84,
+    "max_format": 85
   }
 }

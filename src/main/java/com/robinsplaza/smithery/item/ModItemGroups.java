@@ -76,6 +76,10 @@ public class ModItemGroups {
                         entries.accept(ModItems.GOLDEN_MATTOCK);
 
                         entries.accept(ModBlocks.IRON_GRATE);
+                        entries.accept(ModBlocks.CUT_IRON);
+                        entries.accept(ModBlocks.CUT_IRON_WALL);
+                        entries.accept(ModBlocks.CUT_IRON_STAIRS);
+                        entries.accept(ModBlocks.CUT_IRON_SLAB);
                         entries.accept(ModBlocks.ROSE_GOLD_GRATE);
                         entries.accept(ModBlocks.ROSE_GOLD_BARS);
                         entries.accept(ModBlocks.ROSE_GOLD_CHAIN);
@@ -84,16 +88,18 @@ public class ModItemGroups {
                         entries.accept(ModBlocks.GOLD_CHAIN);
                         entries.accept(ModBlocks.NETHERITE_GRATE);
                         entries.accept(ModBlocks.NETHERITE_BARS);
-                        entries.accept(ModBlocks.NETHERITE_WALL);
                         entries.accept(ModBlocks.NETHERITE_CHAIN);
-                        entries.accept(ModBlocks.NETHERITE_STAIRS);
-                        entries.accept(ModBlocks.NETHERITE_SLAB);
+                        entries.accept(ModBlocks.CUT_NETHERITE);
+                        entries.accept(ModBlocks.CUT_NETHERITE_WALL);
+                        entries.accept(ModBlocks.CUT_NETHERITE_STAIRS);
+                        entries.accept(ModBlocks.CUT_NETHERITE_SLAB);
                         entries.accept(ModBlocks.WYRMSTEEL_GRATE);
                         entries.accept(ModBlocks.WYRMSTEEL_BARS);
-                        entries.accept(ModBlocks.WYRMSTEEL_WALL);
                         entries.accept(ModBlocks.WYRMSTEEL_CHAIN);
-                        entries.accept(ModBlocks.WYRMSTEEL_STAIRS);
-                        entries.accept(ModBlocks.WYRMSTEEL_SLAB);
+                        entries.accept(ModBlocks.CUT_WYRMSTEEL);
+                        entries.accept(ModBlocks.CUT_WYRMSTEEL_WALL);
+                        entries.accept(ModBlocks.CUT_WYRMSTEEL_STAIRS);
+                        entries.accept(ModBlocks.CUT_WYRMSTEEL_SLAB);
 
                         entries.accept(ModItems.COPPER_SPUR);
                         entries.accept(ModItems.SILVER_SPUR);

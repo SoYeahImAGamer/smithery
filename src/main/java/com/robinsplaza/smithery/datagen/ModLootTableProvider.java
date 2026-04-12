@@ -34,6 +34,10 @@ public class ModLootTableProvider extends FabricBlockLootSubProvider {
         add(ModBlocks.QUICKSILVER_ORE, multiOreDrops(ModBlocks.QUICKSILVER_ORE, ModItems.QUICKSILVER, 1.0f, 2.0f));
 
         dropSelf(ModBlocks.IRON_GRATE);
+        dropSelf(ModBlocks.CUT_IRON);
+        dropSelf(ModBlocks.CUT_IRON_WALL);
+        dropSelf(ModBlocks.CUT_IRON_STAIRS);
+        dropSelf(ModBlocks.CUT_IRON_SLAB);
 
         dropSelf(ModBlocks.GOLD_GRATE);
         dropSelf(ModBlocks.GOLD_BARS);
@@ -45,6 +49,10 @@ public class ModLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.NETHERITE_GRATE);
         dropSelf(ModBlocks.NETHERITE_BARS);
+        dropSelf(ModBlocks.CUT_NETHERITE);
+        dropSelf(ModBlocks.CUT_NETHERITE_WALL);
+        dropSelf(ModBlocks.CUT_NETHERITE_STAIRS);
+        dropSelf(ModBlocks.CUT_NETHERITE_SLAB);
         dropSelf(ModBlocks.NETHERITE_WALL);
         dropSelf(ModBlocks.NETHERITE_CHAIN);
         dropSelf(ModBlocks.NETHERITE_STAIRS);
@@ -52,6 +60,10 @@ public class ModLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.WYRMSTEEL_GRATE);
         dropSelf(ModBlocks.WYRMSTEEL_BARS);
+        dropSelf(ModBlocks.CUT_WYRMSTEEL);
+        dropSelf(ModBlocks.CUT_WYRMSTEEL_WALL);
+        dropSelf(ModBlocks.CUT_WYRMSTEEL_SLAB);
+        dropSelf(ModBlocks.CUT_WYRMSTEEL_STAIRS);
         dropSelf(ModBlocks.WYRMSTEEL_WALL);
         dropSelf(ModBlocks.WYRMSTEEL_CHAIN);
         dropSelf(ModBlocks.WYRMSTEEL_STAIRS);
