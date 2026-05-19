@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.accept(ModItems.ROSE_GOLD_SHOVEL);
                         entries.accept(ModItems.ROSE_GOLD_HOE);
                         entries.accept(ModItems.ROSE_GOLD_SWORD);
+                        entries.accept(ModItems.ROSE_GOLD_SPEAR);
 
                         entries.accept(ModItems.ROSE_GOLD_HELMET);
                         entries.accept(ModItems.ROSE_GOLD_CHESTPLATE);
@@ -47,6 +48,7 @@ public class ModItemGroups {
                         entries.accept(ModItems.RUBY_SHOVEL);
                         entries.accept(ModItems.RUBY_HOE);
                         entries.accept(ModItems.RUBY_SWORD);
+                        entries.accept(ModItems.RUBY_SPEAR);
 
                         entries.accept(ModItems.RUBY_HELMET);
                         entries.accept(ModItems.RUBY_CHESTPLATE);
@@ -62,6 +64,7 @@ public class ModItemGroups {
                         entries.accept(ModItems.WYRMSTEEL_SHOVEL);
                         entries.accept(ModItems.WYRMSTEEL_HOE);
                         entries.accept(ModItems.WYRMSTEEL_SWORD);
+                        entries.accept(ModItems.WYRMSTEEL_SPEAR);
 
                         entries.accept(ModItems.WYRMSTEEL_HELMET);
                         entries.accept(ModItems.WYRMSTEEL_CHESTPLATE);
@@ -83,9 +86,17 @@ public class ModItemGroups {
                         entries.accept(ModBlocks.ROSE_GOLD_GRATE);
                         entries.accept(ModBlocks.ROSE_GOLD_BARS);
                         entries.accept(ModBlocks.ROSE_GOLD_CHAIN);
+                        entries.accept(ModBlocks.CUT_ROSE_GOLD);
+                        entries.accept(ModBlocks.CUT_ROSE_GOLD_WALL);
+                        entries.accept(ModBlocks.CUT_ROSE_GOLD_STAIRS);
+                        entries.accept(ModBlocks.CUT_ROSE_GOLD_SLAB);
                         entries.accept(ModBlocks.GOLD_GRATE);
                         entries.accept(ModBlocks.GOLD_BARS);
                         entries.accept(ModBlocks.GOLD_CHAIN);
+                        entries.accept(ModBlocks.CUT_GOLD);
+                        entries.accept(ModBlocks.CUT_GOLD_WALL);
+                        entries.accept(ModBlocks.CUT_GOLD_STAIRS);
+                        entries.accept(ModBlocks.CUT_GOLD_SLAB);
                         entries.accept(ModBlocks.NETHERITE_GRATE);
                         entries.accept(ModBlocks.NETHERITE_BARS);
                         entries.accept(ModBlocks.NETHERITE_CHAIN);

@@ -22,7 +22,7 @@ public class ModArmorMaterials {
     public static final ResourceKey<EquipmentAsset> ROSE_GOLD_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "rose_gold"));
     public static final ResourceKey<EquipmentAsset> RUBY_KEY = ResourceKey.create(REGISTRY_KEY, Identifier.fromNamespaceAndPath(Smithery.MOD_ID, "ruby"));
 
-    public static final ArmorMaterial WYRMSTEEL_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+    public static final ArmorMaterial WYRMSTEEL_ARMOR_MATERIAL = new ArmorMaterial(33, Util.make(new EnumMap<>(ArmorType.class), map -> {
         map.put(ArmorType.BOOTS, 3);
         map.put(ArmorType.LEGGINGS, 5);
         map.put(ArmorType.CHESTPLATE, 7);
@@ -30,7 +30,7 @@ public class ModArmorMaterials {
         map.put(ArmorType.BODY, 11);
     }), 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 0, 0, ModItemTagProvider.WYRMSTEEL_REPAIR_MATERIALS, WYRMSTEEL_KEY);
 
-    public static final ArmorMaterial ROSE_GOLD_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+    public static final ArmorMaterial ROSE_GOLD_ARMOR_MATERIAL = new ArmorMaterial(15, Util.make(new EnumMap<>(ArmorType.class), map -> {
         map.put(ArmorType.BOOTS, 1);
         map.put(ArmorType.LEGGINGS, 4);
         map.put(ArmorType.CHESTPLATE, 5);
@@ -38,7 +38,7 @@ public class ModArmorMaterials {
         map.put(ArmorType.BODY, 7);
     }), 20, SoundEvents.ARMOR_EQUIP_GOLD, 0, 0, ModItemTagProvider.ROSE_GOLD_REPAIR_MATERIALS, ROSE_GOLD_KEY);
 
-    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(500, Util.make(new EnumMap<>(ArmorType.class), map -> {
+    public static final ArmorMaterial RUBY_ARMOR_MATERIAL = new ArmorMaterial(33, Util.make(new EnumMap<>(ArmorType.class), map -> {
         map.put(ArmorType.BOOTS, 3);
         map.put(ArmorType.LEGGINGS, 6);
         map.put(ArmorType.CHESTPLATE, 8);

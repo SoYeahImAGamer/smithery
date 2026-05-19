@@ -37,37 +37,45 @@ public class ModLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.CUT_IRON);
         dropSelf(ModBlocks.CUT_IRON_WALL);
         dropSelf(ModBlocks.CUT_IRON_STAIRS);
-        dropSelf(ModBlocks.CUT_IRON_SLAB);
+        add(ModBlocks.CUT_IRON_SLAB, this::createSlabItemTable);
 
         dropSelf(ModBlocks.GOLD_GRATE);
         dropSelf(ModBlocks.GOLD_BARS);
         dropSelf(ModBlocks.GOLD_CHAIN);
+        dropSelf(ModBlocks.CUT_GOLD);
+        dropSelf(ModBlocks.CUT_GOLD_WALL);
+        dropSelf(ModBlocks.CUT_GOLD_STAIRS);
+        add(ModBlocks.CUT_GOLD_SLAB, this::createSlabItemTable);
 
         dropSelf(ModBlocks.ROSE_GOLD_GRATE);
         dropSelf(ModBlocks.ROSE_GOLD_BARS);
         dropSelf(ModBlocks.ROSE_GOLD_CHAIN);
+        dropSelf(ModBlocks.CUT_ROSE_GOLD);
+        dropSelf(ModBlocks.CUT_ROSE_GOLD_WALL);
+        dropSelf(ModBlocks.CUT_ROSE_GOLD_STAIRS);
+        add(ModBlocks.CUT_ROSE_GOLD_SLAB, this::createSlabItemTable);
 
         dropSelf(ModBlocks.NETHERITE_GRATE);
         dropSelf(ModBlocks.NETHERITE_BARS);
         dropSelf(ModBlocks.CUT_NETHERITE);
         dropSelf(ModBlocks.CUT_NETHERITE_WALL);
         dropSelf(ModBlocks.CUT_NETHERITE_STAIRS);
-        dropSelf(ModBlocks.CUT_NETHERITE_SLAB);
+        add(ModBlocks.CUT_NETHERITE_SLAB, this::createSlabItemTable);
         dropSelf(ModBlocks.NETHERITE_WALL);
         dropSelf(ModBlocks.NETHERITE_CHAIN);
         dropSelf(ModBlocks.NETHERITE_STAIRS);
-        dropSelf(ModBlocks.NETHERITE_SLAB);
+        add(ModBlocks.NETHERITE_SLAB, this::createSlabItemTable);
 
         dropSelf(ModBlocks.WYRMSTEEL_GRATE);
         dropSelf(ModBlocks.WYRMSTEEL_BARS);
         dropSelf(ModBlocks.CUT_WYRMSTEEL);
         dropSelf(ModBlocks.CUT_WYRMSTEEL_WALL);
-        dropSelf(ModBlocks.CUT_WYRMSTEEL_SLAB);
+        add(ModBlocks.CUT_WYRMSTEEL_SLAB, this::createSlabItemTable);
         dropSelf(ModBlocks.CUT_WYRMSTEEL_STAIRS);
         dropSelf(ModBlocks.WYRMSTEEL_WALL);
         dropSelf(ModBlocks.WYRMSTEEL_CHAIN);
         dropSelf(ModBlocks.WYRMSTEEL_STAIRS);
-        dropSelf(ModBlocks.WYRMSTEEL_SLAB);
+        add(ModBlocks.WYRMSTEEL_SLAB, this::createSlabItemTable);
 
     }
 

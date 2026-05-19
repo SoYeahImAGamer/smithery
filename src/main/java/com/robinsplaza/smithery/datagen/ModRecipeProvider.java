@@ -45,6 +45,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_SHOVEL, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_SHOVEL);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_HOE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HOE);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_SWORD, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SWORD);
+                offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, Items.DIAMOND_SPEAR, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SPEAR);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.DIAMOND_HAMMER, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HAMMER);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_PICKAXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_PICKAXE);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_AXE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_AXE);
@@ -52,6 +53,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_SHOVEL, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_SHOVEL);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HOE, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HOE);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_SWORD, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SWORD);
+                offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_SPEAR, ModItems.WYRMSTEEL_INGOT, RecipeCategory.COMBAT, ModItems.WYRMSTEEL_SPEAR);
                 offerBasicUpgradeRecipe(output, ModItems.WYRMSTEEL_UPGRADE, ModItems.RUBY_HAMMER, ModItems.WYRMSTEEL_INGOT, RecipeCategory.TOOLS, ModItems.WYRMSTEEL_HAMMER);
 
                 //wyrmsteel armor
@@ -80,6 +82,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerBasicUpgradeRecipe(output, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_SHOVEL, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, Items.NETHERITE_SHOVEL);
                 offerBasicUpgradeRecipe(output, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_HOE, Items.NETHERITE_INGOT, RecipeCategory.TOOLS, Items.NETHERITE_HOE);
                 offerBasicUpgradeRecipe(output, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_SWORD, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_SWORD);
+                offerBasicUpgradeRecipe(output, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ModItems.RUBY_SPEAR, Items.NETHERITE_INGOT, RecipeCategory.COMBAT, Items.NETHERITE_SPEAR);
 
                 //mattocks
                 offerBasicUpgradeRecipe(output, ModItems.MULTITOOL_UPGRADE, Items.IRON_AXE, Items.IRON_HOE, RecipeCategory.TOOLS, ModItems.IRON_MATTOCK);
@@ -120,10 +123,44 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_GRATE, ModBlocks.ROSE_GOLD_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_BARS, ModBlocks.ROSE_GOLD_BLOCK, 24);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_GOLD_CHAIN, ModBlocks.ROSE_GOLD_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD, ModBlocks.ROSE_GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_WALL, ModBlocks.ROSE_GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_STAIRS, ModBlocks.ROSE_GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_SLAB, ModBlocks.ROSE_GOLD_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_STAIRS, ModBlocks.CUT_ROSE_GOLD, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_WALL, ModBlocks.CUT_ROSE_GOLD, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_SLAB, ModBlocks.CUT_ROSE_GOLD, 2);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_SLAB, ModBlocks.CUT_ROSE_GOLD);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_WALL, ModBlocks.CUT_ROSE_GOLD);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_ROSE_GOLD_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModBlocks.CUT_ROSE_GOLD)
+                        .unlockedBy(getHasName(ModBlocks.CUT_ROSE_GOLD), has(ModBlocks.CUT_ROSE_GOLD))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("cut_rose_gold_stairs")));
 
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_GRATE, Blocks.GOLD_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_BARS, Blocks.GOLD_BLOCK, 24);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GOLD_CHAIN, Blocks.GOLD_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD, Blocks.GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_WALL, Blocks.GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_STAIRS, Blocks.GOLD_BLOCK, 4);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_SLAB, Blocks.GOLD_BLOCK, 8);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_STAIRS, ModBlocks.CUT_GOLD, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_WALL, ModBlocks.CUT_GOLD, 1);
+                stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_SLAB, ModBlocks.CUT_GOLD, 2);
+
+                slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_SLAB, ModBlocks.CUT_GOLD);
+                wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_WALL, ModBlocks.CUT_GOLD);
+                shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CUT_GOLD_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .define('#', ModBlocks.CUT_GOLD)
+                        .unlockedBy(getHasName(ModBlocks.CUT_GOLD), has(ModBlocks.CUT_GOLD))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("cut_gold_stairs")));
 
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_GRATE, Blocks.NETHERITE_BLOCK, 8);
                 stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ModBlocks.NETHERITE_BARS, Blocks.NETHERITE_BLOCK, 24);
@@ -264,6 +301,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT), has(ModItems.ROSE_GOLD_INGOT))
                         .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("rose_gold_sword")));
 
+                shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_SPEAR, 1)
+                        .pattern("  r")
+                        .pattern(" s ")
+                        .pattern("s  ")
+                        .define('r', ModItems.ROSE_GOLD_INGOT)
+                        .define('s', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.ROSE_GOLD_INGOT), has(ModItems.ROSE_GOLD_INGOT))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("rose_gold_spear")));
+
                 shaped(RecipeCategory.COMBAT, ModItems.ROSE_GOLD_HELMET, 1)
                         .pattern("rrr")
                         .pattern("r r")
@@ -350,6 +396,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('s', Items.STICK)
                         .unlockedBy(getHasName(ModItems.RUBY), has(ModItems.RUBY))
                         .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("ruby_sword")));
+
+                shaped(RecipeCategory.COMBAT, ModItems.RUBY_SPEAR, 1)
+                        .pattern("  r")
+                        .pattern(" s ")
+                        .pattern("s  ")
+                        .define('r', ModItems.RUBY)
+                        .define('s', Items.STICK)
+                        .unlockedBy(getHasName(ModItems.RUBY), has(ModItems.RUBY))
+                        .save(output, ResourceKey.create(Registries.RECIPE, Identifier.parse("ruby_spear")));
 
                 shaped(RecipeCategory.COMBAT, ModItems.RUBY_HELMET, 1)
                         .pattern("rrr")

@@ -43,6 +43,8 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterial.WYRMSTEEL, 1, -2.2f, setting.rarity(Rarity.UNCOMMON)));
     public static final Item WYRMSTEEL_SWORD = registerItem("wyrmsteel_sword",
             setting -> new Item(setting.sword(ModToolMaterial.WYRMSTEEL, 4, -2f).rarity(Rarity.UNCOMMON)));
+    public static final Item WYRMSTEEL_SPEAR = registerItem("wyrmsteel_spear",
+            setting -> new Item(setting.spear(ModToolMaterial.WYRMSTEEL, 0.65F, 1.05F, 0.35F, 3.0F, 10.0F, 6.5F, 5.1F, 10.0F, 4.6F).rarity(Rarity.UNCOMMON)));
     public static final MattockItem WYRMSTEEL_MATTOCK = (MattockItem) registerItem("wyrmsteel_mattock",
             setting -> new MattockItem(ModToolMaterial.WYRMSTEEL, 6, -2.8f, setting.rarity(Rarity.UNCOMMON)));
 
@@ -57,6 +59,8 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterial.ROSE_GOLD, 0, -3.0f, setting.rarity(Rarity.COMMON)));
     public static final Item ROSE_GOLD_SWORD = registerItem("rose_gold_sword",
             setting -> new Item(setting.sword(ModToolMaterial.ROSE_GOLD, 3, -2.4f).rarity(Rarity.COMMON)));
+    public static final Item ROSE_GOLD_SPEAR = registerItem("rose_gold_spear",
+            setting -> new Item(setting.spear(ModToolMaterial.ROSE_GOLD, 0.95F, 0.95F, 0.6F, 2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F).rarity(Rarity.COMMON)));
     public static final MattockItem ROSE_GOLD_MATTOCK = (MattockItem) registerItem("rose_gold_mattock",
             setting -> new MattockItem(ModToolMaterial.ROSE_GOLD, 6, -3.0f, setting.rarity(Rarity.COMMON)));
 
@@ -73,6 +77,8 @@ public class ModItems {
             setting -> new HoeItem(ModToolMaterial.RUBY, 0, -3.0f, setting.rarity(Rarity.COMMON)));
     public static final Item RUBY_SWORD = registerItem("ruby_sword",
             setting -> new Item(setting.sword(ModToolMaterial.RUBY, 3, -2.4f).rarity(Rarity.COMMON)));
+    public static final Item RUBY_SPEAR = registerItem("ruby_spear",
+            setting -> new Item(setting.spear(ModToolMaterial.RUBY, 1.05F, 1.075F, 0.5F, 3.0F, 10.0F, 6.5F, 5.1F, 10.0F, 4.6F).rarity(Rarity.COMMON)));
     public static final MattockItem RUBY_MATTOCK = (MattockItem) registerItem("ruby_mattock",
             setting -> new MattockItem(ModToolMaterial.RUBY, 6, -3.0f, setting.rarity(Rarity.COMMON)));
 

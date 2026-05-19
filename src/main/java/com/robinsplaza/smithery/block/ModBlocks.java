@@ -124,6 +124,33 @@ public class ModBlocks {
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.CHAIN)));
+    public static final Block CUT_ROSE_GOLD = registerBlock("cut_rose_gold",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_ROSE_GOLD_WALL = registerBlock("cut_rose_gold_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_ROSE_GOLD_STAIRS = registerBlock("cut_rose_gold_stairs",
+            properties -> new StairBlock(ROSE_GOLD_BLOCK.defaultBlockState(), properties
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_ROSE_GOLD_SLAB = registerBlock("cut_rose_gold_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.COLOR_PINK)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
 
         //gold
     public static final Block GOLD_GRATE = registerBlock("gold_grate",
@@ -155,6 +182,33 @@ public class ModBlocks {
                     .isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never)
                     .sound(SoundType.CHAIN)));
+    public static final Block CUT_GOLD = registerBlock("cut_gold",
+            properties -> new Block(properties
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_GOLD_WALL = registerBlock("cut_gold_wall",
+            properties -> new WallBlock(properties
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .isRedstoneConductor(Blocks::never)
+                    .isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never)
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_GOLD_STAIRS = registerBlock("cut_gold_stairs",
+            properties -> new StairBlock(Blocks.GOLD_BLOCK.defaultBlockState(), properties
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
+    public static final Block CUT_GOLD_SLAB = registerBlock("cut_gold_slab",
+            properties -> new SlabBlock(properties
+                    .mapColor(MapColor.GOLD)
+                    .strength(5.0f, 6.0f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.METAL)));
 
         //netherite
     public static final Block NETHERITE_GRATE = registerBlock("netherite_grate",

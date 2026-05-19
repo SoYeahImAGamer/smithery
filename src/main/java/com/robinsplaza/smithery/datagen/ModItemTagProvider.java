@@ -62,7 +62,8 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.ROSE_GOLD_AXE)
                 .add(ModItems.ROSE_GOLD_SHOVEL)
                 .add(ModItems.ROSE_GOLD_HOE)
-                .add(ModItems.ROSE_GOLD_SWORD);
+                .add(ModItems.ROSE_GOLD_SWORD)
+                .add(ModItems.ROSE_GOLD_SPEAR);
 
         valueLookupBuilder(ROSE_GOLD_ARMOR)
                 .add(ModItems.ROSE_GOLD_HELMET)
@@ -76,6 +77,7 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(RUBY_TOOLS)
                 .add(ModItems.RUBY_PICKAXE)
                 .add(ModItems.RUBY_SWORD)
+                .add(ModItems.RUBY_SPEAR)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.RUBY_SHOVEL)
                 .add(ModItems.RUBY_HOE)
@@ -93,6 +95,7 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(WYRMSTEEL_TOOLS)
                 .add(ModItems.WYRMSTEEL_PICKAXE)
                 .add(ModItems.WYRMSTEEL_SWORD)
+                .add(ModItems.WYRMSTEEL_SPEAR)
                 .add(ModItems.WYRMSTEEL_AXE)
                 .add(ModItems.WYRMSTEEL_SHOVEL)
                 .add(ModItems.WYRMSTEEL_HOE)
@@ -147,7 +150,10 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.RUBY_SWORD)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.WYRMSTEEL_SWORD)
-                .add(ModItems.WYRMSTEEL_AXE);
+                .add(ModItems.WYRMSTEEL_AXE)
+                .add(ModItems.ROSE_GOLD_SPEAR)
+                .add(ModItems.RUBY_SPEAR)
+                .add(ModItems.WYRMSTEEL_SPEAR);
 
         valueLookupBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .add(ModItems.ROSE_GOLD_SWORD)
@@ -155,7 +161,15 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.RUBY_SWORD)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.WYRMSTEEL_SWORD)
-                .add(ModItems.WYRMSTEEL_AXE);
+                .add(ModItems.WYRMSTEEL_AXE)
+                .add(ModItems.ROSE_GOLD_SPEAR)
+                .add(ModItems.RUBY_SPEAR)
+                .add(ModItems.WYRMSTEEL_SPEAR);
+
+        valueLookupBuilder(ItemTags.LUNGE_ENCHANTABLE)
+                .add(ModItems.ROSE_GOLD_SPEAR)
+                .add(ModItems.RUBY_SPEAR)
+                .add(ModItems.WYRMSTEEL_SPEAR);
 
         valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .addTag(MATTOCKS)
@@ -164,13 +178,16 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.ROSE_GOLD_SHOVEL)
                 .add(ModItems.ROSE_GOLD_HOE)
                 .add(ModItems.ROSE_GOLD_SWORD)
+                .add(ModItems.ROSE_GOLD_SPEAR)
                 .add(ModItems.RUBY_PICKAXE)
                 .add(ModItems.RUBY_SWORD)
+                .add(ModItems.RUBY_SPEAR)
                 .add(ModItems.RUBY_AXE)
                 .add(ModItems.RUBY_SHOVEL)
                 .add(ModItems.RUBY_HOE)
                 .add(ModItems.RUBY_HAMMER)
                 .add(ModItems.WYRMSTEEL_SWORD)
+                .add(ModItems.WYRMSTEEL_SPEAR)
                 .add(ModItems.WYRMSTEEL_PICKAXE)
                 .add(ModItems.WYRMSTEEL_AXE)
                 .add(ModItems.WYRMSTEEL_SHOVEL)
@@ -183,6 +200,10 @@ public class ModItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(ModItems.ROSE_GOLD_SWORD)
                 .add(ModItems.RUBY_SWORD)
                 .add(ModItems.WYRMSTEEL_SWORD);
+        valueLookupBuilder(ItemTags.SPEARS)
+                .add(ModItems.ROSE_GOLD_SPEAR)
+                .add(ModItems.RUBY_SPEAR)
+                .add(ModItems.WYRMSTEEL_SPEAR);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.RUBY_PICKAXE)
                 .add(ModItems.ROSE_GOLD_PICKAXE)

@@ -22,6 +22,8 @@ public class ModModelProvider extends FabricModelProvider {
         BlockModelGenerators.BlockFamilyProvider cutIronPool = blockStateModelGenerator.family(ModBlocks.CUT_IRON);
         BlockModelGenerators.BlockFamilyProvider cutNetheritePool = blockStateModelGenerator.family(ModBlocks.CUT_NETHERITE);
         BlockModelGenerators.BlockFamilyProvider cutWyrmsteelPool = blockStateModelGenerator.family(ModBlocks.CUT_WYRMSTEEL);
+        BlockModelGenerators.BlockFamilyProvider cutRoseGoldPool = blockStateModelGenerator.family(ModBlocks.CUT_ROSE_GOLD);
+        BlockModelGenerators.BlockFamilyProvider cutGoldPool = blockStateModelGenerator.family(ModBlocks.CUT_GOLD);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.RUBY_BLOCK);
         blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_BLOCK);
@@ -37,10 +39,16 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialCube(ModBlocks.ROSE_GOLD_GRATE);
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.ROSE_GOLD_CHAIN.asItem());
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.ROSE_GOLD_BARS.asItem());
+        cutRoseGoldPool.wall(ModBlocks.CUT_ROSE_GOLD_WALL);
+        cutRoseGoldPool.stairs(ModBlocks.CUT_ROSE_GOLD_STAIRS);
+        cutRoseGoldPool.slab(ModBlocks.CUT_ROSE_GOLD_SLAB);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.GOLD_GRATE);
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.GOLD_CHAIN.asItem());
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.GOLD_BARS.asItem());
+        cutGoldPool.wall(ModBlocks.CUT_GOLD_WALL);
+        cutGoldPool.stairs(ModBlocks.CUT_GOLD_STAIRS);
+        cutGoldPool.slab(ModBlocks.CUT_GOLD_SLAB);
 
         blockStateModelGenerator.createTrivialCube(ModBlocks.NETHERITE_GRATE);
         blockStateModelGenerator.registerSimpleFlatItemModel(ModBlocks.NETHERITE_CHAIN.asItem());
@@ -87,6 +95,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.WYRMSTEEL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(ModItems.WYRMSTEEL_SPEAR);
 
         itemModelGenerator.generateFlatItem(ModItems.RUBY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RUBY_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -95,6 +104,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.RUBY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RUBY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.RUBY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(ModItems.RUBY_SPEAR);
 
         itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -102,6 +112,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.ROSE_GOLD_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerator.generateSpear(ModItems.ROSE_GOLD_SPEAR);
 
         itemModelGenerator.generateFlatItem(ModItems.DIAMOND_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerator.generateFlatItem(ModItems.NETHERITE_HAMMER, ModelTemplates.FLAT_HANDHELD_ITEM);
